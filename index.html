@@ -186,10 +186,14 @@
             gap: 2rem;
             text-align: center;
         }
+        .dropan{
+            color:black;
+        }
         .container-box{
             padding: 35px 35px 35px 35px;
             background: var(--other-color);
             border-radius: 7rem;
+            min-width: 400px;
         }
         .container-box img{
             width: 100%;
@@ -239,7 +243,7 @@
             gap: 10rem;
         }
         .chip1-img img{
-            width: 130%;
+            width: 100%;
             height: auto;
             border-radius: 15rem;
         }
@@ -249,7 +253,7 @@
             margin-bottom: 2rem;
         }
         .chip1-text p{
-            color: var(--second-color);
+            color: whitesmoke;
             font-size: var(--p-font);
             line-height: 30px;
             margin-bottom: 3rem;
@@ -257,10 +261,48 @@
         .chip1 .chip1-0{
             background: var(--main-color);
             border-radius: 100px;
+            min-width: 500px;
+            min-height: 1400px;
         }
         .chip1 .chip1-1{
             background: var(--other-color);
             border-radius: 100px;
+            min-width: 500px;
+            min-height: 1400px;
+        }
+        .chip2{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            align-items: center;
+            gap: 10rem;
+        }
+        .chip2-img img{
+            width: 100%;
+            height: auto;
+            border-radius: 15rem;
+        }
+        .chip2-text h2{
+            font-size: var(--h2-font);
+            line-height: 1.3;
+            margin-bottom: 2rem;
+        }
+        .chip2-text p{
+            color: whitesmoke;
+            font-size: var(--p-font);
+            line-height: 30px;
+            margin-bottom: 3rem;
+        }
+        .chip2 .chip2-0{
+            background: var(--main-color);
+            border-radius: 100px;
+            min-width: 500px;
+            min-height: 1570px;
+        }
+        .chip2 .chip2-1{
+            background: var(--other-color);
+            border-radius: 100px;
+            min-width: 500px;
+            min-height: 1570px;
         }
         .middle-text{
             text-align: center;
@@ -273,6 +315,12 @@
         }
         .middle-text h2{
             font-size: var(--h2-font);
+        }
+        .chip-text h4{
+            font-size: 30px;
+            font-weight: 800;
+            margin-bottom: -100px;
+            color: var(--main-color);
         }
         .shop-content{
             display: grid;
@@ -287,8 +335,7 @@
             background: var(--other-color);
             border-radius: 3rem;
             min-width: 300px;
-            min-height: 600px;
-            max-height: 600px;
+            height: 780px;
             box-shadow: #ff9f0d 0px 1px 20px;
         }
         .row img{
@@ -306,7 +353,7 @@
         .row p{
             color: var(--second-color);
             font-size: var(--p-font);
-            line-height: 30px;
+            line-height: 25px;
             margin-bottom: 1.1rem;
         }
         .in-text{
@@ -458,8 +505,8 @@
             .navlist{
                 position: absolute;
                 top: -1000px;
+                width: 390px;
                 left: 0;
-                right: 0;
                 display: flex;
                 flex-direction: column;
                 text-align: left;
@@ -509,6 +556,12 @@
             .about{
                 grid-template-columns: 1fr;
             }
+            .chip1{
+                grid-template-columns: 1fr;
+            }
+            .chip2{
+                grid-template-columns: 1fr;
+            }
             .about-img{
                 text-align: center;
             }
@@ -521,8 +574,28 @@
         }
         @media(max-width: 440px){
             .home{
-                height: 110vh;
-                gap: 0.1rem;
+                 height: 110vh;
+                 gap: 0.1rem;
+            }
+            .chip1 .chip1-0{
+                 background: var(--main-color);
+                 border-radius: 100px;
+                 max-width: 390px;
+            }
+            .chip1 .chip1-1{
+                 background: var(--other-color);
+                 border-radius: 100px;
+                 max-width: 390px;
+            }
+            .chip2 .chip2-0{
+                background: var(--main-color);
+                border-radius: 100px;
+                max-width: 390px;
+            }
+            .chip2 .chip2-1{
+                background: var(--other-color);
+                border-radius: 100px;
+                max-width: 390px;
             }
         }
     </style>
@@ -535,7 +608,6 @@
              <li><a href="#about">Hakkımızda</a></li>
              <li><a href="#shop">Hizmetlerimiz</a></li>
              <li><a href="#review"> Yeni Geri Dönüşler</a></li>
-             <li><a href="#contact">Contact Us</a></li>
          </ul>
          <div class="nav-icons">
               <a href="#"><i class="bx bx-search"></i></a>
@@ -557,20 +629,18 @@
     <!--Container-->
     <section class="container">
         <div class="container-box">
-            <img src="" >
-            <h3> hakkinda yazilar olmasi gerek </h3>
-            <a href="#">working hours</a>
-        </div>
-        <div class="container-box">
-            <img src="" >
-            <h3> hakkinda yazilar olmasi gerek </h3>
-            <a href="#">working hours</a>
-        </div>
-        <div class="container-box">
-            <img src="" >
-            <h3> hakkinda yazilar olmasi gerek </h3>
-            <a href="#">working hours</a>
-        </div>
+            <h3>Çalışma Saatlerimiz</h3>
+            <p>7 gün 24 saat hizmetinizdeyiz!</p>
+          </div>
+          <div class="container-box">
+            <h3>Keyifli Alışverişler!</h3>
+            <p>Müşterilerimize en hızlı şekilde hizmet veriyoruz.</p>
+          </div>
+          <div class="container-box">
+            <h3>Bizimle İletişime Geçin</h3>
+            <p>Hızlı yanıt almak için mail adresimize yazabilirsiniz.</p>
+            <a href="mailto:iletisim@ornekmail.com">Bize e-posta gönderin</a>
+          </div>
     </section>
     <!--aboutus-->
     <section class="about" id="about">
@@ -595,10 +665,10 @@
             <div class="row">
                 <img src="https://r.resimlink.com/PzDdv7Gjlc.png" >
                 <h3 align="center">ÇipBaşlangıç</h3>
-                <p align="center">Çiplere yeni adım atanlar için başlangıç seviyesinde bir paket. Temel çip çözümlerini içerir ve müşterilere giriş seviyesindeki çip teknolojileri hakkında bilgi sağlar.</p>
+                <p align="center">"ÇipBaşlangıç" paketi, kişisel bilgiler içeren üye sayfası tasarımı, kendine has alan adı, SSL güvenlik sertifikası ve ana-yedek çip gibi özellikler sunar. Bu paket, web projenizi başlatmak veya geliştirmek için gerekli temel ve gelişmiş özellikleri bir araya getirir. TekÇip'in uzman ekibi, size hızlı ve etkili destek sağlamak için her zaman hazırdır.</p>
                 <div class="in-text">
                     <div class="price">
-                        <h6>100$</h6>
+                      <h6><a href="#"class="dropan"><i class="bx bxs-info-circle"></i></a> Ön bilgilendirme </h6>
                     </div>
                     <div class="s-btnn">
                         <a href="#">Sipariş Ekle</a>
@@ -615,11 +685,11 @@
             <div class="row">
                 <img src="https://r.resimlink.com/U-6Zoz9B.png" >
                 <h3 align="center">YenilikçiÇip</h3>
-                <p align="center"> İnovatif çözümler ve gelişmiş çip teknolojileriyle ilgilenenlere yönelik orta seviye bir paket. İleri düzey çip tasarımı ve özelleştirilebilir çip çözümleri sunar.</p>
+                <p align="center"> "YenilikçiÇip" paketi, online varlığınızı güçlendirmek ve kişisel markanızı oluşturmak isteyenler için ideal bir seçenektir. Kişisel bilgilerinizi güvende tutarken, özgün bir alan adı ve güvenlik sertifikasıyla profesyonel bir çevrimiçi varlık oluşturmanızı sağlar. Ayrıca, şahıs özgeçmişi bölümüyle yeteneklerinizi ve deneyimlerinizi etkili bir şekilde sergileyebilirsiniz.</p>
                <br>
                 <div class="in-text">
                     <div class="price">
-                        <h6>100$</h6>
+                        <h6><a href="#" class="dropan"><i class="bx bxs-info-circle"></i></a> Ön bilgilendirme </h6>
                     </div>
                     <div class="s-btnn">
                         <a href="#">Sipariş Ekle</a>
@@ -640,7 +710,7 @@
                 <br><br>
                 <div class="in-text">
                     <div class="price">
-                        <h6>100$</h6>
+                        <h6><a href="#" class="dropan"><i class="bx bxs-info-circle"></i></a> Ön bilgilendirme </h6>
                     </div>
                     <div class="s-btnn">
                         <a href="#">Sipariş Ekle</a>
@@ -660,7 +730,7 @@
                 <p align="center">Çip teknolojilerine tutkulu olan ve en son yenilikleri takip eden ileri düzey kullanıcılar için premium bir paket. En gelişmiş çip çözümleri, özelleştirme seçenekleri ve ileri düzey teknik destek sunar.</p>
                 <div class="in-text">
                     <div class="price">
-                        <h6>100$</h6>
+                        <h6><a href="#" class="dropan"><i class="bx bxs-info-circle"></i></a> Ön bilgilendirme </h6>
                     </div>
                     <div class="s-btnn">
                         <a href="#">Sipariş Ekle </a>
@@ -683,29 +753,179 @@
     <section class="chip1" id="chip1">
         <section class="chip1-0">
             <div class="chip1-img">
-                <img src="https://r.resimlink.com/U-6Zoz9B.png"  >
+                <img src="https://r.resimlink.com/PzDdv7Gjlc.png"  >
+                <h2 align="center">ÇipBaşlangıç</h2>
             </div>
-            <div class="chip1-text">
+            <div class="chip1-text"  align="center">
                 <h2> Kişisel </h2>
-                <p>TekÇip Teknoloji şirketi olarak, müşterilerimize özel çipler üretme ve kodlama konusunda uzmanız. İhtiyaçlarınıza özel tasarlanmış çipler ile size özgü çözümler sunuyoruz. Türkiye'deki sayılı şirketlerden biri olarak, teknoloji sektöründe öncü bir konumdayız. <br>
-                  Ekibimiz, müşteri memnuniyetini en üst düzeyde tutmak için özveriyle çalışmaktadır. Tecrübeli ve uzman kadromuz, hızlı ve kaliteli hizmet sunarak projelerinizi zamanında ve istediğiniz standartlarda tamamlar. Sahip olduğumuz deneyim ve uzmanlık, çiplerin üretim sürecini optimize etmemizi ve en yüksek kalitede ürünler sunmamızı sağlar. Ekibimiz, teknoloji alanındaki gelişmeleri yakından takip eder ve yenilikçi çözümler üretme konusunda yeteneklidir. Size özel çipler üretme ve kodlama konusundaki başarılarımızı, deneyimli ekibimize borçluyuz <br>
-                  TekÇip Teknoloji olarak, hızlı ve kaliteli hizmet sunma konusunda kendimize güveniyoruz. Müşterilerimizin zaman değerini önemsiyor ve projelerini belirlenen süre içinde tamamlamak için gereken çabayı gösteriyoruz. Her aşamada titizlikle çalışarak, müşterilerimize güvenilir ve istikrarlı bir iş ortağı olmayı sürdürüyoruz. </p> <br>
-                <a href="#" class="btn">Keşfet <i class="bx bx-right-arrow"></i></a>
+                <p>
+
+                    <a href="#" class="dropan"><i class="bx bxs-droplet-half"></i></a> Kişisel Bilgiler İçeren Üye Sayfası Tasarımı: Size özel bir web sayfası tasarlanır ve kişisel bilgilerinizi içeren bir üyelik sistemi oluşturulur. <br><br>
+                    <a href="#" class="dropan"><i class="bx bxs-droplet-half"></i></a> Kendine Has Domain: Kendi adınıza veya tercih ettiğiniz bir isimle alan adı kaydedilir. <br><br>
+                    <a href="#" class="dropan"><i class="bx bxs-droplet-half"></i></a> SSL Güvenlik Sertifikası: Web sitenizdeki trafiğin güvenliğini sağlamak için SSL sertifikası sağlanır. <br><br>
+                    <a href="#" class="dropan"><i class="bx bxs-droplet-half"></i></a> Bir Ana Çip ve Bir Yedek Çip: Web sitenizin daha güvenli ve kesintisiz çalışması için bir ana çip ve bir yedek çip sunulur. <br><br>
+                    
+                    <a href="#" class="dropan"><i class="bx bxs-droplet-half"></i></a> Geliştirilmiş Kullanıcı Arayüzü: Yenilenen arayüz, daha kullanıcı dostu ve kolay kullanılabilir bir deneyim sunar. <br><br>
+                    <a href="#" class="dropan"><i class="bx bxs-droplet-half"></i></a> Artırılmış Güvenlik Özellikleri: Yeni güvenlik önlemleri ve algoritmaları, web sitenizin güvenliğini daha da artırır. <br><br>
+                    <a href="#" class="dropan"><i class="bx bxs-droplet-half"></i></a> Mobil Uyumluluk: Web siteniz, farklı mobil cihazlarda sorunsuz bir şekilde görüntülenebilir ve kullanılabilir. <br><br>
+                <a align="center" href="#" class="btn">Sipariş ekle <i class="bx bx-right-arrow"></i></a>
             </div>
         </section> 
         <section class="chip1-1">
             <div class="chip1-img">
                 <img src="https://r.resimlink.com/OSmvr.png" >
+                <h2 align="center">ÇipBaşlangıç</h2>
             </div>
-            <div class="chip1-text">
-                <h2> Kurumsal </h2>
-                <p>TekÇip Teknoloji şirketi olarak, müşterilerimize özel çipler üretme ve kodlama konusunda uzmanız. İhtiyaçlarınıza özel tasarlanmış çipler ile size özgü çözümler sunuyoruz. Türkiye'deki sayılı şirketlerden biri olarak, teknoloji sektöründe öncü bir konumdayız. <br>
-                  Ekibimiz, müşteri memnuniyetini en üst düzeyde tutmak için özveriyle çalışmaktadır. Tecrübeli ve uzman kadromuz, hızlı ve kaliteli hizmet sunarak projelerinizi zamanında ve istediğiniz standartlarda tamamlar. Sahip olduğumuz deneyim ve uzmanlık, çiplerin üretim sürecini optimize etmemizi ve en yüksek kalitede ürünler sunmamızı sağlar. Ekibimiz, teknoloji alanındaki gelişmeleri yakından takip eder ve yenilikçi çözümler üretme konusunda yeteneklidir. Size özel çipler üretme ve kodlama konusundaki başarılarımızı, deneyimli ekibimize borçluyuz <br>
-                  TekÇip Teknoloji olarak, hızlı ve kaliteli hizmet sunma konusunda kendimize güveniyoruz. Müşterilerimizin zaman değerini önemsiyor ve projelerini belirlenen süre içinde tamamlamak için gereken çabayı gösteriyoruz. Her aşamada titizlikle çalışarak, müşterilerimize güvenilir ve istikrarlı bir iş ortağı olmayı sürdürüyoruz. </p> <br>
-                <a href="#" class="btn">Keşfet <i class="bx bx-right-arrow"></i></a>
+            <div class="chip1-text" align="center">
+                <h2> Kimler için daha uygundur </h2>
+                <p><h3>Bütçe Dostu Çözüm Arayanlar:</h3>
+                    "ÇipBaşlangıç" paketi, uygun fiyatıyla öne çıkar ve düşük bütçeye sahip olan kullanıcılar veya küçük işletmeler için mükemmel bir seçenektir. Bu paket sayesinde web varlığınızı uygun maliyetle oluşturabilir ve geliştirebilirsiniz. <br><br>
+                    
+                    <h3>Küçük Ölçekli Projeler:</h3>
+                    Kendi işinizi veya kişisel projelerinizi başlatmak isteyenler için "ÇipBaşlangıç" paketi ideal bir çözümdür. Bu paket, projenize özel bir web sayfası tasarımı ve üye sayfası oluşturma imkanı sunarak online varlığınızı güçlendirmenize yardımcı olur. Bu şekilde, hedef kitlenize ulaşabilir ve projenizin büyümesine katkıda bulunabilirsiniz. <br><br>
+                    
+                    <h3>Başlangıç Düzeyindeki Kullanıcılar:</h3>
+                    Web dünyasında yeni olan veya sınırlı teknik bilgiye sahip olan kişiler için "ÇipBaşlangıç" paketi ideal bir seçenektir. Adım adım rehberlik ve kullanıcı dostu arayüzü sayesinde web sitesi oluşturma sürecini basitleştirir. Bu paket, kullanıcıların web varlığını hızlı ve kolay bir şekilde başlatmasına yardımcı olur.</p> <br>
+                <a href="#" class="btn"> Sipariş Ekle <i class="bx bx-right-arrow"></i></a>
             </div>
         </section>
     </section>
+       <!--chip2-->
+       <section class="chip2" id="chip2">
+        <section class="chip2-0">
+            <div class="chip2-img">
+                <img src="https://r.resimlink.com/U-6Zoz9B.png"  >
+                <h2 align="center">YenilikçiÇip</h2>
+            </div>
+            <div class="chip2-text"  align="center">
+                <h2> Kişisel </h2>
+                <p>
+
+                    <a href="#" class="dropan"><i class="bx bxs-droplet-half"></i></a> Kişisel Bilgiler İçeren Üye Sayfası Tasarımı: Size özel bir web sayfası tasarlanır ve kişisel bilgilerinizi içeren bir üyelik sistemi oluşturulur. <br><br>
+                    <a href="#" class="dropan"><i class="bx bxs-droplet-half"></i></a> Kendine Has Domain: Kendi adınıza veya tercih ettiğiniz bir isimle alan adı kaydedilir. <br><br>
+                    <a href="#" class="dropan"><i class="bx bxs-droplet-half"></i></a> SSL Güvenlik Sertifikası: Web sitenizdeki trafiğin güvenliğini sağlamak için SSL sertifikası sağlanır. <br><br>
+                    <a href="#" class="dropan"><i class="bx bxs-droplet-half"></i></a> Bir Ana Çip ve Bir Yedek Çip: Web sitenizin daha güvenli ve kesintisiz çalışması için bir ana çip ve bir yedek çip sunulur. <br><br>
+                    <a href="#" class="dropan"><i class="bx bxs-droplet-half"></i></a> "ÇipBaşlangıç" paketi, web sitenizin güvenli ve kesintisiz çalışması için bir ana çip, bir yardımcı çip ve bir yedek hak sunar. Bu özellikler sayesinde web sitenizin performansı artar, sorunlar hızlıca çözülür ve kullanıcılarınıza kesintisiz bir deneyim sağlanır. <br><br>
+                    <a href="#" class="dropan"><i class="bx bxs-droplet-half"></i></a> Şahıs Özgeçmişi: İş deneyimlerinizi, eğitim bilgilerinizi ve ilgi alanlarınızı içeren ayrıntılı bir şahıs özgeçmişi bölümüne sahip olursunuz. Böylece potansiyel işverenler veya iş bağlantıları sizi daha iyi tanıyabilir ve iletişim kurabilir. <br><br>
+
+                    <a href="#" class="dropan"><i class="bx bxs-droplet-half"></i></a> Kapsamlı Bilgi Paylaşımı: Şu anda ilgilendiğiniz iş hakkında detaylı bilgileri paylaşabilirsiniz. Bu, potansiyel işverenlerin veya iş ortaklarının sizinle ilgili daha fazla bilgi edinmesine yardımcı olur. <br><br>
+                <a align="center" href="#" class="btn">Sipariş ekle <i class="bx bx-right-arrow"></i></a>
+            </div>
+        </section> 
+        <section class="chip2-1">
+            <div class="chip2-img">
+                <img src="https://r.resimlink.com/OSmvr.png" >
+                <h2 align="center">YenilikçiÇip</h2>
+            </div>
+            <div class="chip2-text" align="center">
+                <h2> Kimler için daha uygundur </h2>
+                <p> <h3>Küçük İşletmeler ve Girişimciler: </h3>
+                    İşletmesini başlatmak veya çevrimiçi varlığını güçlendirmek isteyen küçük işletme sahipleri ve girişimciler için bu paket idealdir. Uygun maliyeti ve temel özellikleri sayesinde web sitesi oluşturmak ve markalarını çevrimiçi ortamda tanıtmak isteyen bu kullanıcılar için "ÇipBaşlangıç" paketi, işlerini büyütmeleri için önemli bir adımdır. <br><br>
+
+                    <h3>Bireysel Projeler ve Portfolyolar:</h3>
+                    Kişisel projeler üzerinde çalışan sanatçılar, yazarlar, tasarımcılar ve diğer yaratıcı profesyoneller için "ÇipBaşlangıç" paketi uygun bir seçenektir. Kendi yeteneklerini ve çalışmalarını sergilemek, potansiyel müşteriler ve iş fırsatlarıyla bağlantı kurmak isteyen bu kullanıcılar için paketin özellikleri etkili bir şekilde kullanılabilir. <br><br>
+                   
+                    <h3>Başlangıç Düzeyindeki Kullanıcılar:</h3>
+                    Web dünyasında yeni olan veya sınırlı teknik bilgiye sahip olan kullanıcılar için "ÇipBaşlangıç" paketi idealdir. Adım adım rehberlik ve kullanıcı dostu arayüzü sayesinde web sitesi oluşturma süreci basitleştirilir. Bu kullanıcılar, hızlı bir şekilde çevrimiçi varlık oluşturabilir ve web sitelerini yönetme konusunda güven kazanabilirler. <br><br></p>
+                <a href="#" class="btn"> Sipariş Ekle <i class="bx bx-right-arrow"></i></a>
+            </div>
+        </section>
+    </section>
+      <!--chip3-->
+      <section class="chip2" id="chip2">
+        <section class="chip2-0">
+            <div class="chip2-img">
+                <img src="https://r.resimlink.com/pf9RrJsQuNZz.png"  >
+                <h2 align="center">ProfesyonelÇip</h2>
+            </div>
+            <div class="chip2-text"  align="center">
+                <h2> Kişisel </h2>
+                <p>
+
+                    <a href="#" class="dropan"><i class="bx bxs-droplet-half"></i></a> Kişisel Bilgiler İçeren Üye Sayfası Tasarımı: Size özel bir web sayfası tasarlanır ve kişisel bilgilerinizi içeren bir üyelik sistemi oluşturulur. <br><br>
+                    <a href="#" class="dropan"><i class="bx bxs-droplet-half"></i></a> Kendine Has Domain: Kendi adınıza veya tercih ettiğiniz bir isimle alan adı kaydedilir. <br><br>
+                    <a href="#" class="dropan"><i class="bx bxs-droplet-half"></i></a> SSL Güvenlik Sertifikası: Web sitenizdeki trafiğin güvenliğini sağlamak için SSL sertifikası sağlanır. <br><br>
+                    <a href="#" class="dropan"><i class="bx bxs-droplet-half"></i></a> Kapsamlı Sayfa: Paket içerisinde yer alan özel bir sayfa, kurumunuzun geçmişi hakkında ayrıntılı bilgi sunar. Bu sayfada kurumunuzun başarıları, projeleri ve deneyimleri kapsamlı bir şekilde anlatılır. Potansiyel müşteriler ve iş ortakları, kurumunuz hakkında daha fazla bilgi edinmek için bu sayfayı kullanabilir. <br><br>
+                    <a href="#" class="dropan"><i class="bx bxs-droplet-half"></i></a>İki Premium Çip: "ProfesyonelÇip" paketi, kurumunuzun web sitesi için iki premium çip sunar. Birincisi, tanıtım amacıyla kullanılır ve kurumunuzun kendisini etkileyici bir şekilde tanıtmasına olanak sağlar. İkincisi, veri aktarımı için kullanılır ve kurumunuzun büyük miktarda veriyi güvenli bir şekilde depolamasına yardımcı olur. <br><br>
+                    <a href="#" class="dropan"><i class="bx bxs-droplet-half"></i></a>Tam Set Şansı: Bu paket, size birbirini tamamlayan iki premium çipin yanı sıra komple bir set sunar. Bu set, kurumunuzun tüm bilgilerini ve projelerini depolama ve güncelleme imkanı sağlar. Böylece kurumunuz, çevrimiçi varlığınızı etkili bir şekilde yönetebilir ve gelecekteki büyüme için sağlam bir temel oluşturabilir. <br><br>
+                    <a align="center" href="#" class="btn">Sipariş ekle <i class="bx bx-right-arrow"></i></a>
+            </div>
+        </section> 
+        <section class="chip2-1">
+            <div class="chip2-img">
+                <img src="https://r.resimlink.com/OSmvr.png" >
+                <h2 align="center">ProfesyonelÇip</h2>
+            </div>
+            <div class="chip2-text" align="center">
+                <h2> Kimler için daha uygundur </h2>
+                <p> <h3>Kurumsal Şirketler:</h3>
+                     Büyük ölçekli şirketler, "ProfesyonelÇip" paketini kullanarak çevrimiçi varlıklarını güçlendirebilir. Bu paket, şirketin geçmişi, projeleri, başarıları ve hizmetleri gibi bilgileri kapsamlı bir şekilde sunarak potansiyel müşterilere etkileyici bir izlenim bırakır. <br><br>
+
+                    <h3>Ajanslar ve Danışmanlık Firmaları:</h3> 
+                    Reklam ajansları, dijital pazarlama firmaları, danışmanlık şirketleri gibi profesyonel hizmet sağlayıcılar, "ProfesyonelÇip" paketi sayesinde müşterilerine sundukları hizmetleri etkili bir şekilde tanıtabilirler. Bu paket, projeleri sergileme ve portfolyo oluşturma konusunda özellikler sunarak kurumunuzun uzmanlık alanını vurgular. <br><br>
+                    
+                    <h3>Sanat Endüstrisi:</h3> 
+                    Sanatçılar, tasarımcılar, müzisyenler ve diğer yaratıcı profesyoneller, "ProfesyonelÇip" paketi ile çalışmalarını çevrimiçi olarak sergileyebilirler. Bu paket, sanatsal projeleri görsel olarak sunma, müzik ve videoları paylaşma gibi özelliklerle sanatçıların kendilerini ifade etmelerine olanak tanır. <br><br>
+                    
+                    <h3>Yaratıcı Endüstri:</h3> 
+                    Eğitim Kurumları: Üniversiteler, kolejler, eğitim kurumları, "ProfesyonelÇip" paketini kullanarak kurumlarının tanıtımını yapabilir ve öğrencilere detaylı bilgiler sunabilirler. Bu paket, kurumun eğitim programları, akademik başarıları ve öğrenci kaynakları gibi bilgileri paylaşma imkanı sağlar. <br></p>
+                <a href="#" class="btn"> Sipariş Ekle <i class="bx bx-right-arrow"></i></a>
+            </div>
+        </section>
+    </section>
+        <!--chip4-->
+        <section class="chip2" id="chip2">
+            <section class="chip2-0">
+                <div class="chip2-img">
+                    <img src="https://r.resimlink.com/ueQon9HzDL.png"  >
+                    <h2 align="center">MaksimumÇip</h2>
+                </div>
+                <div class="chip2-text"  align="center">
+                    <h2> Kişisel </h2>
+                    <p>
+    
+                        <a href="#" class="dropan"><i class="bx bxs-droplet-half"></i></a> Kişisel Bilgiler İçeren Üye Sayfası Tasarımı: Size özel bir web sayfası tasarlanır ve kişisel bilgilerinizi içeren bir üyelik sistemi oluşturulur. <br><br>
+                        <a href="#" class="dropan"><i class="bx bxs-droplet-half"></i></a> Kendine Has Domain: Kendi adınıza veya tercih ettiğiniz bir isimle alan adı kaydedilir. <br><br>
+                        <a href="#" class="dropan"><i class="bx bxs-droplet-half"></i></a> SSL Güvenlik Sertifikası: Web sitenizdeki trafiğin güvenliğini sağlamak için SSL sertifikası sağlanır. <br><br>
+                        <a href="#" class="dropan"><i class="bx bxs-droplet-half"></i></a> Kapsamlı Sayfa: Paket içerisinde yer alan özel bir sayfa, kurumunuzun geçmişi hakkında ayrıntılı bilgi sunar. Bu sayfada kurumunuzun başarıları, projeleri ve deneyimleri kapsamlı bir şekilde anlatılır. Potansiyel müşteriler ve iş ortakları, kurumunuz hakkında daha fazla bilgi edinmek için bu sayfayı kullanabilir. <br><br>
+                        <a href="#" class="dropan"><i class="bx bxs-droplet-half"></i></a>Tam Set Şansı: Bu paket, size birbirini tamamlayan iki premium çipin yanı sıra komple bir set sunar. Bu set, kurumunuzun tüm bilgilerini ve projelerini depolama ve güncelleme imkanı sağlar. Böylece kurumunuz, çevrimiçi varlığınızı etkili bir şekilde yönetebilir ve gelecekteki büyüme için sağlam bir temel oluşturabilir. <br><br>
+                        <a href="#" class="dropan"><i class="bx bxs-droplet-half"></i></a> Tanıtım Amaçlı Premium Çip: İlk premium çip, kurumunuzun kendini etkileyici bir şekilde tanıtmasını sağlar. Misyonunuz, vizyonunuz, başarılarınız ve hizmetleriniz gibi bilgileri vurgulayarak potansiyel müşterilerinize güçlü bir izlenim bırakabilirsiniz. <br><br>
+                        <a href="#" class="dropan"><i class="bx bxs-droplet-half"></i></a>Veri Aktarımı İçin Premium Çip: İkinci premium çip, büyük miktarda veriyi güvenli bir şekilde depolamanızı sağlar. Müşteri bilgileri, işlemler, dosyalar ve diğer önemli verileri saklayabilir ve güvenli bir şekilde erişebilirsiniz. <br><br>
+                        <a href="#" class="dropan"><i class="bx bxs-droplet-half"></i></a>İki Kez Yılda Çip Değişimi: "ProfesyonelÇip" paketi, size yılda iki kez çip değiştirme imkanı sunar. Bu özellik sayesinde, olası çip kaybı, hasar veya bozulma durumlarında çipleri güncelleyebilir ve web sitenizin sorunsuz bir şekilde çalışmasını sağlayabilirsiniz. <br><br>
+                        <a align="center" href="#" class="btn">Sipariş ekle <i class="bx bx-right-arrow"></i></a>
+                </div>
+            </section> 
+            <section class="chip2-1">
+                <div class="chip2-img">
+                    <img src="https://r.resimlink.com/OSmvr.png" >
+                    <h2 align="center">MaksimumÇip</h2>
+                </div>
+                <div class="chip2-text" align="center">
+                    <h2> Kimler için daha uygundur </h2>
+                    <p> <h3>Kurumsal Şirketler:</h3>
+                        Büyük ölçekli şirketler, "ProfesyonelÇip" paketini kullanarak çevrimiçi varlıklarını güçlendirebilir. Bu paket, şirketin geçmişi, projeleri, başarıları ve hizmetleri gibi bilgileri kapsamlı bir şekilde sunarak potansiyel müşterilere etkileyici bir izlenim bırakır. <br><br>
+    
+                        <h3>Turizm Acenteleri:</h3>
+                        Turizm sektöründe faaliyet gösteren acenteler, müşterilerine çeşitli turistik hizmetleri etkileyici bir şekilde sunmak ve müşteri bilgilerini güvenli bir şekilde saklamak için bu özelliği kullanabilirler. Tanıtım amaçlı premium çip, tatil paketleri, otel rezervasyonları ve diğer hizmetlerin tanıtımında kullanılabilir. <br><br>
+                        
+                        <h3>Kafe Zincirleri:</h3>
+                        Kafe zincirleri, müşterilerine özel indirimler, sadakat programları ve diğer avantajlar sunmak için bu özelliği kullanabilirler. Aynı zamanda, veri aktarımı için premium çip sayesinde müşteri siparişleri, ödemeler ve diğer veriler güvenli bir şekilde depolanabilir. <br><br>
+
+                        <h3>İş İnsanları ve Girişimciler: </h3> 
+                        Büyük iş adamları ve girişimciler, kendi kişisel markalarını veya işletmelerini etkileyici bir şekilde tanıtmak için bu özelliği tercih edebilirler. Tanıtım amaçlı premium çip, başarılarını ve uzmanlıklarını vurgulayarak iş dünyasında güçlü bir itibar oluşturmalarına yardımcı olur. <br><br>
+
+                        <h3>Yatırımcılar ve Şirket Sahipleri:</h3> 
+                        Yatırımcılar ve şirket sahipleri, portföylerini ve şirketlerini etkileyici bir şekilde sunmak için bu özelliği kullanabilirler. Veri aktarımı için premium çip, mali verileri güvenli bir şekilde saklamalarını ve yatırım kararları için gerekli bilgilere hızlı erişim sağlamalarını sağlar. <br><br>
+
+                        <h3>Sanat Endüstrisi:</h3> 
+                        Sanatçılar, tasarımcılar, müzisyenler ve diğer yaratıcı profesyoneller, "ProfesyonelÇip" paketi ile çalışmalarını çevrimiçi olarak sergileyebilirler. Bu paket, sanatsal projeleri görsel olarak sunma, müzik ve videoları paylaşma gibi özelliklerle sanatçıların kendilerini ifade etmelerine olanak tanır. <br><br>
+                        
+                        <h3>Yaratıcı Endüstri:</h3> 
+                        Eğitim Kurumları: Üniversiteler, kolejler, eğitim kurumları, "ProfesyonelÇip" paketini kullanarak kurumlarının tanıtımını yapabilir ve öğrencilere detaylı bilgiler sunabilirler. Bu paket, kurumun eğitim programları, akademik başarıları ve öğrenci kaynakları gibi bilgileri paylaşma imkanı sağlar. <br></p>
+                    <a href="#" class="btn"> Sipariş Ekle <i class="bx bx-right-arrow"></i></a>
+                </div>
+            </section>
+        </section>
     <!--Reviews-->
     <section class="review" id="review">
          <div class="middle-text">
@@ -844,10 +1064,12 @@
     sr.reveal ('.home-text',{delay:300});
     sr.reveal ('.home-img',{delay:400});
     sr.reveal ('.container',{delay:400});
-
     sr.reveal ('.about-img',{});
     sr.reveal ('.about-text',{delay:300});
-
+    sr.reveal('.chip1 .chip1-0',{delay:300});
+    sr.reveal('.chip1 .chip1-1',{delay:300});
+    sr.reveal('.chip2 .chip2-0',{delay:300});
+    sr.reveal('.chip2 .chip2-1',{delay:300});
     sr.reveal ('.middle-text',{});
     sr.reveal ('.row-btn,.shop-content',{delay:300});
     sr.reveal ('.review, .review-content',{delay:300});
