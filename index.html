@@ -487,6 +487,12 @@
             .container{
                 padding: 30px 4% 50px;
             }
+            .container-box{
+            padding: 35px 35px 35px 35px;
+            background: var(--other-color);
+            border-radius: 7rem;
+            min-width: 350px;
+           }
         }
         @media(max-wdith: 1180px){
             :root{
@@ -538,6 +544,7 @@
                 max-width: 490px;
                 height: auto;
             }
+
             .home{
                 height: 70vh;
             }
@@ -565,38 +572,62 @@
             .about-img{
                 text-align: center;
             }
+            
         }
-        @media(max-width: 475px){
+        @media(max-width: 480px){
             :root{
                 --big-font: 2.8rem;
                 --h2-font: 2rem;
             }
-        }
-        @media(max-width: 440px){
             .home{
                  height: 110vh;
                  gap: 0.1rem;
             }
+            .shop{
+                min-width: 320px;
+            }
+            .row{
+                min-width: 320px;
+            }
+            .about-img img {
+                min-width: 320px;
+            }
             .chip1 .chip1-0{
                  background: var(--main-color);
                  border-radius: 100px;
-                 max-width: 390px;
+                 min-width: 320px;
+                 align-items: center;
             }
             .chip1 .chip1-1{
                  background: var(--other-color);
                  border-radius: 100px;
-                 max-width: 390px;
+                 min-width: 320px;
             }
             .chip2 .chip2-0{
                 background: var(--main-color);
                 border-radius: 100px;
-                max-width: 390px;
+                min-width: 320px;
             }
             .chip2 .chip2-1{
                 background: var(--other-color);
                 border-radius: 100px;
-                max-width: 390px;
+                min-width: 320px;
             }
+            .container{
+                padding: 30px 4% 50px;
+            }
+            .container-box{
+            padding: 35px 35px 35px 35px;
+            background: var(--other-color);
+            border-radius: 7rem;
+            min-width: 320px;
+           }
+           .review-content .box{
+            min-width: 320px;
+           }
+           .review .middle-text{
+            min-width: 320px;
+           }
         }
     </style>
 </head>
@@ -928,7 +959,7 @@
         </section>
     <!--Reviews-->
     <section class="review" id="review">
-         <div class="middle-text">
+         <div class="middle-text" align="center">
              <h2>Yeni Müşteri Geri Dönüşleri: Memnuniyetimizi Paylaşanlar </h2>
              <h4>Her ay 100'e yakın akıllıca seçilmiş siparişle hızlı teslimat sağladığımız projelerimizle, içlerinden özenle seçtiğimiz paylaşımlar yapıyoruz.</h4>
 
