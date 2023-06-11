@@ -1,0 +1,1214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TekÇip</title>
+    <!--Ikon Paketleri-->
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <!-- Ve -->
+    <link rel="stylesheet"
+    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <!--Font Link-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            list-style: none;
+            text-decoration: none;
+            scroll-behavior: smooth;
+            scroll-padding-top: 3rem;
+        }
+        :root{
+            --main-color: #ff9f0d;
+            --text-color: #fff;
+            --other-color: #212121;
+            --second-color: #9e9e9e;
+            --bg-color: #111111;
+
+            --big-font: 4.5rem;
+            --h2-font: 2.6rem;
+            --p-font: 1.1rem;
+        }
+        body{
+            background: var(--bg-color);
+            color: var(--text-color);
+        }
+        header{
+            position: fixed;
+            width: 100%;
+            top: 0;
+            right: 0;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: transparent;
+            padding: 30px 14%;
+            transition: all .50s ease;
+        }
+        .logo{
+            display: flex;
+            align-items: center;
+            color: var(--text-color);
+            font-size: 33px;
+            font-weight: 700;
+        }
+        .logo i{
+            vertical-align: middle;
+            margin-right: 8px;
+            color: var(--main-color);
+        }
+        .navlist{
+            display: flex;
+        }
+        .navlist a{
+            color: var(--text-color);
+            font-size: var(--p-font);
+            font-weight: 600;
+            margin: 0 30px;
+            transition: all .50s ease;
+        }
+        .navlist a:hover{
+            color: var(--main-color);
+        }
+        .navlist a.active{
+            color: var(--main-color);
+        }
+        .nav-icons{
+            display: flex;
+            align-items: center;
+            padding: 8px 15px;
+            background: var(--main-color);
+            border-radius: 3rem;
+            box-shadow: #ff9f0d 0px 1px 25px;
+        }
+        .nav-icons i{
+            vertical-align: middle;
+            font-size: 25px;
+            color: var(--bg-color);
+            margin-right: 8px;
+            margin-left: 5px;
+            transition: all .50s ease;
+        }
+        #menu-icon{
+            font-size: 32px;
+            color: var(--bg-color);
+            z-index: 10001;
+            cursor: pointer;
+            display: none;
+        }
+        .nav-icons i:hover{
+            transform: scale(1.1);
+            color: var(--text-color);
+        }
+        section{
+            padding: 70px 14% 60px;
+        }
+        .home{
+            position: relative;
+            height: 100vh;
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            align-items: center;
+            gap: 2rem;
+        }
+        .home-img img{
+            width: 130%;
+            height: auto;
+        }
+        @keyframes move {
+             0% {
+             transform: translateX(0);
+             }
+             50% {
+             transform: translateX(100px);
+             }
+             100% {
+             transform: translateX(0);
+             }
+        }
+        .home-text h1{
+            font-size: var(--big-font);
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 3rem;
+        }
+        span{
+            color: var(--main-color);
+        }
+        .btn{
+            display: inline-block;
+            padding: 15px 35px;
+            background: var(--other-color);
+            color: var(--main-color);
+            font-size: var(--p-font);
+            font-weight: 500;
+            letter-spacing: 1px;
+            border-radius: 3rem;
+            transition: all .50s ease;
+        }
+        .btn i{
+            vertical-align: middle;
+            margin-left: 9px;
+            font-size: 22px;
+        }
+        .btn:hover{
+            background: var(--main-color);
+            color: var(--bg-color);
+            box-shadow: #ff9f0d 0px 1px 25px;
+        }
+        .btn2{
+            display: inline-block;
+            margin-left: 30px;
+            font-size: var(--p-font);
+            font-weight: 500;
+            letter-spacing: 1px;
+            border-bottom: 3px solid var(--main-color);
+            color: var(--main-color);
+            transition: all .50s ease;
+        }
+        .btn2:hover{
+            transform: scale(1.1) translateX(12px);
+        }
+        .container{
+            padding: 10px 14% 50px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px,auto));
+            gap: 2rem;
+            text-align: center;
+        }
+        .dropan{
+            color:black;
+        }
+        .container-box{
+            padding: 35px 35px 35px 35px;
+            background: var(--other-color);
+            border-radius: 7rem;
+            min-width: 400px;
+        }
+        .container-box img{
+            width: 100%;
+            max-width: 50px;
+            height: auto;
+        }
+        .container-box h3{
+            font-size: 21px;
+            font-weight: bold;
+            margin: 16px 0;
+        }
+        .container-box a{
+            color: var(--second-color);
+            font-size: var(--p-font);
+            letter-spacing: 1px;
+            transition: all .50s ease;
+        }
+        .container-box a:hover{
+            color: var(--main-color);
+        }
+        .about{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            align-items: center;
+            gap: 4rem;
+        }
+        .about-img img{
+            width: 180%;
+            height: auto;
+            border-radius: 15rem;
+        }
+        .about-text h2{
+            font-size: var(--h2-font);
+            line-height: 1.3;
+            margin-bottom: 2rem;
+        }
+        .about-text p{
+            color: var(--second-color);
+            font-size: var(--p-font);
+            line-height: 30px;
+            margin-bottom: 3rem;
+        }
+        .chip1{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            align-items: center;
+            gap: 10rem;
+        }
+        .chip1-img img{
+            width: 100%;
+            height: auto;
+            border-radius: 15rem;
+        }
+        .chip1-text h2{
+            font-size: var(--h2-font);
+            line-height: 1.3;
+            margin-bottom: 2rem;
+        }
+        .chip1-text p{
+            color: whitesmoke;
+            font-size: var(--p-font);
+            line-height: 30px;
+            margin-bottom: 3rem;
+        }
+        .chip1 .chip1-0{
+            background: var(--main-color);
+            border-radius: 100px;
+            min-width: 500px;
+            min-height: 1400px;
+        }
+        .chip1 .chip1-1{
+            background: var(--other-color);
+            border-radius: 100px;
+            min-width: 500px;
+            min-height: 1400px;
+        }
+        .chip2{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            align-items: center;
+            gap: 10rem;
+        }
+        .chip2-img img{
+            width: 100%;
+            height: auto;
+            border-radius: 15rem;
+        }
+        .chip2-text h2{
+            font-size: var(--h2-font);
+            line-height: 1.3;
+            margin-bottom: 2rem;
+        }
+        .chip2-text p{
+            color: whitesmoke;
+            font-size: var(--p-font);
+            line-height: 30px;
+            margin-bottom: 3rem;
+        }
+        .chip2 .chip2-0{
+            background: var(--main-color);
+            border-radius: 100px;
+            min-width: 500px;
+            min-height: 1570px;
+        }
+        .chip2 .chip2-1{
+            background: var(--other-color);
+            border-radius: 100px;
+            min-width: 500px;
+            min-height: 1570px;
+        }
+        .chip3{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            align-items: center;
+            gap: 10rem;
+        }
+        .chip3-img img{
+            width: 100%;
+            height: auto;
+            border-radius: 15rem;
+        }
+        .chip3-text h2{
+            font-size: var(--h2-font);
+            line-height: 1.3;
+            margin-bottom: 2rem;
+        }
+        .chip3-text p{
+            color: whitesmoke;
+            font-size: var(--p-font);
+            line-height: 30px;
+            margin-bottom: 3rem;
+        }
+        .chip3 .chip3-0{
+            background: var(--main-color);
+            border-radius: 100px;
+            min-width: 500px;
+            min-height: 1570px;
+        }
+        .chip3 .chip3-1{
+            background: var(--other-color);
+            border-radius: 100px;
+            min-width: 500px;
+            min-height: 1570px;
+        }
+        .chip4{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            align-items: center;
+            gap: 10rem;
+        }
+        .chip4-img img{
+            width: 100%;
+            height: auto;
+            border-radius: 15rem;
+        }
+        .chip4-text h2{
+            font-size: var(--h2-font);
+            line-height: 1.3;
+            margin-bottom: 2rem;
+        }
+        .chip4-text p{
+            color: whitesmoke;
+            font-size: var(--p-font);
+            line-height: 30px;
+            margin-bottom: 3rem;
+        }
+        .chip4 .chip4-0{
+            background: var(--main-color);
+            border-radius: 100px;
+            min-width: 500px;
+            min-height: 1570px;
+        }
+        .chip4 .chip4-1{
+            background: var(--other-color);
+            border-radius: 100px;
+            min-width: 500px;
+            min-height: 1570px;
+        }
+        .middle-text{
+            text-align: center;
+        }
+        .middle-text h4{
+            font-size: 15px;
+            font-weight: 400;
+            margin-bottom: 10px;
+            color: var(--main-color);  
+        }
+        .middle-text h2{
+            font-size: var(--h2-font);
+        }
+        .chip-text h4{
+            font-size: 30px;
+            font-weight: 800;
+            margin-bottom: -100px;
+            color: var(--main-color);
+        }
+        .shop-content{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px,auto));
+            gap: 3rem;
+            align-items: center;
+            margin-top: 4rem;
+        }
+        .row{
+            position: relative;
+            padding: 30px 35px 40px;
+            background: var(--other-color);
+            border-radius: 3rem;
+            min-width: 300px;
+            height: 780px;
+            box-shadow: #ff9f0d 0px 1px 20px;
+        }
+        .row img{
+            width: 100%;
+            height: auto;
+            align-items: center;
+            transition: all .50s ease;
+            cursor: pointer;
+        }
+        .row h3{
+            font-size: 18px;
+            margin-bottom: 5px;
+            font-weight: 700;
+        }
+        .row p{
+            color: var(--second-color);
+            font-size: var(--p-font);
+            line-height: 25px;
+            margin-bottom: 1.1rem;
+        }
+        .in-text{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .in-text .price h6{
+            font-size: 17px;
+            color: var(--main-color);
+            font-weight: 600;
+        }
+        .in-text .s-btnn a{
+            display: inline-block;
+            padding: 9px 23px;
+            background: var(--bg-color);
+            color: var(--main-color);
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            border-radius: 3rem;
+            transition: all .50s ease;
+        }
+        .in-text .s-btnn a:hover{
+            background: var(--main-color);
+            color: var(--bg-color);
+            box-shadow: #ff9f0d 0px 1px 25px;
+        }
+        .s-btnn a{
+            display: inline-block;
+            padding: 9px 23px;
+            background: var(--bg-color);
+            color: var(--main-color);
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            border-radius: 3rem;
+            transition: all .50s ease;  
+        }
+        .s-btnn a:hover{
+            background: var(--main-color);
+            color: var(--bg-color);
+            box-shadow: #ff9f0d 0px 1px 25px;
+        }
+        .top-icon{
+            position: absolute;
+            top: 30px;
+            left: 35px;
+        }
+        .top-icon i{
+            font-size: 22px;
+            color: var(--main-color);
+        }
+        .row-btn{
+            text-align: center;
+            margin-top: 6rem;
+        }
+        .row img:hover{
+            transform: scale(1.1);
+        }
+        .review-content{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+            gap: 2rem;
+            align-items: center;
+            margin-top: 4rem; 
+        }
+        .box{
+            padding: 35px;
+            background: var(--other-color);
+            border-radius: 3rem;
+        }
+        .box p{
+            color: var(--second-color);
+            font-size: var(--p-font);
+            line-height: 30px;
+            margin-bottom: 1.5rem;
+        }
+        .in-box{
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+        .bx-img img{
+            width: 150px;
+            height: auto;
+            border-radius: 1rem;
+        }
+        .bxx-text h4{
+            margin: 5px 0;
+            font-size: 18px;
+        }
+        .bxx-text h5{
+            color: var(--second-color);
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+        .ratings i{
+            color: var(--main-color);
+            font-size: 18px;
+            margin-right: 5px;
+        }
+        .scroll{
+            position: fixed;
+            bottom: 2.2rem;
+            border-top: 2rem;
+            right: 3.2rem;
+        }
+        .scroll i{
+            font-size: 22px;
+            color: var(--text-color);
+            background: var(--main-color);
+            padding: 10px;
+            border-radius: 2rem;
+        }
+        @media (max-width: 1545px){
+            header{
+                padding: 22px 4%;
+                transition: .2s;
+            }
+            header.sticky{
+                padding: 14px 4%;
+                transition: .2s;
+            }
+            section{
+                padding: 50px 4% 40px;
+                transition: .2s;
+            }
+            .container{
+                padding: 30px 4% 50px;
+            }
+            .container-box{
+            padding: 35px 35px 35px 35px;
+            background: var(--other-color);
+            border-radius: 7rem;
+            min-width: 350px;
+           }
+        }
+        @media(max-wdith: 1180px){
+            :root{
+                --big-font: 4rem;
+                --h2-font: 2.2rem;
+                --p-font: 15px;
+            }
+            .home{
+                height: 85vh;
+            }
+        }
+        @media (max-width: 1060px){
+            #menu-icon{
+                display: initial;  
+            }
+            .navlist{
+                position: absolute;
+                top: -1000px;
+                width: 390px;
+                left: 0;
+                display: flex;
+                flex-direction: column;
+                text-align: left;
+                background: var(--other-color);
+                transition: all .45s ease;
+            }
+            .navlist a{
+                display: block;
+                padding: 0.5rem;
+                margin: 1rem;
+                border-left: 2px solid var(--main-color);
+            }
+            .navlist.open{
+                top: 100%;
+            }
+        }
+        @media(max-width: 1045px){
+            :root{
+                --big-font: 3.3rem;
+                --h2-font: 2rem;
+            }
+            .home-img img{
+                width: 100%;
+                max-width: 490px;
+                height: auto;
+            }
+            .about-img img{
+                width: 100%;
+                max-width: 490px;
+                height: auto;
+            }
+
+            .home{
+                height: 70vh;
+            }
+        }
+        @media(max-width: 860px){
+            .home{
+                grid-template-columns: 1fr;
+                height: 118vh;
+            }
+            .home-text{
+                padding-top: 60px;
+            }
+            .home-img{
+                text-align: center;
+            }
+            .about{
+                grid-template-columns: 1fr;
+            }
+            .chip1{
+                grid-template-columns: 1fr;
+            }
+            .chip2{
+                grid-template-columns: 1fr;
+            }
+            .chip3{
+                grid-template-columns: 1fr;
+            }
+            .chip4{
+                grid-template-columns: 1fr;
+            }
+            .about-img{
+                text-align: center;
+            }
+            
+        }
+        @media(max-width: 480px){
+            :root{
+                --big-font: 2.8rem;
+                --h2-font: 2rem;
+            }
+            .home{
+                 height: 110vh;
+                 gap: 0.1rem;
+            }
+            .shop{
+                min-width: 320px;
+            }
+            .row{
+                min-width: 320px;
+            }
+            .about-img img {
+                min-width: 320px;
+            }
+            .chip1 .chip1-0{
+                 background: var(--main-color);
+                 border-radius: 100px;
+                 min-width: 320px;
+                 align-items: center;
+            }
+            .chip1 .chip1-1{
+                 background: var(--other-color);
+                 border-radius: 100px;
+                 min-width: 320px;
+            }
+            .chip2 .chip2-0{
+                background: var(--main-color);
+                border-radius: 100px;
+                min-width: 320px;
+            }
+            .chip2 .chip2-1{
+                background: var(--other-color);
+                border-radius: 100px;
+                min-width: 320px;
+            }
+            .chip3 .chip3-0{
+                background: var(--main-color);
+                border-radius: 100px;
+                min-width: 320px;
+            }
+            .chip3 .chip3-1{
+                background: var(--other-color);
+                border-radius: 100px;
+                min-width: 320px;
+            }
+            .chip4 .chip4-0{
+                background: var(--main-color);
+                border-radius: 100px;
+                min-width: 320px;
+            }
+            .chip4 .chip4-1{
+                background: var(--other-color);
+                border-radius: 100px;
+                min-width: 320px;
+            }
+            .container{
+                padding: 30px 4% 50px;
+            }
+            .container-box{
+            padding: 35px 35px 35px 35px;
+            background: var(--other-color);
+            border-radius: 7rem;
+            min-width: 320px;
+           }
+           .review-content .box{
+            min-width: 320px;
+           }
+           .review .middle-text{
+            min-width: 320px;
+           }
+        }
+    </style>
+</head>
+<body>
+    <header>
+         <a href="#" class="logo"><i class="bx bxs-home"></i>TekÇip</a>
+         <ul class="navlist">
+             <li><a href="#home" class="active">Ana Sayfa</a></li>
+             <li><a href="#about">Hakkımızda</a></li>
+             <li><a href="#shop">Hizmetlerimiz</a></li>
+             <li><a href="#review"> Yeni Geri Dönüşler</a></li>
+         </ul>
+         <div class="nav-icons">
+              <a href="#"><i class="bx bx-search"></i></a>
+              <a href="#"><i class="bx bx-cart"></i></a>
+              <div class="bx bx-menu" id="menu-icon"></div>
+         </div>
+    </header>
+    <!--Home-->
+    <section class="home" id="home">
+          <div class="home-text">
+             <h1>Teknolojiyle <span>Geleceği</span> Şekillendiriyor <br> <span>İnovasyonla</span> Sınırları Aşıyoruz </h1>
+             <a href="#" class="btn">Keşfet <i class="bx bx-right-arrow"></i></a>
+             <a href="#" class="btn2">Sipariş ver</a>
+          </div>
+          <div class="home-img">
+             <img src="https://r.resimlink.com/WZ9JBKN2igmq.png" >
+          </div>
+    </section>
+    <!--Container-->
+    <section class="container">
+        <div class="container-box">
+            <h3>Çalışma Saatlerimiz</h3>
+            <p>7 gün 24 saat hizmetinizdeyiz!</p>
+          </div>
+          <div class="container-box">
+            <h3>Keyifli Alışverişler!</h3>
+            <p>Müşterilerimize en hızlı şekilde hizmet veriyoruz.</p>
+          </div>
+          <div class="container-box">
+            <h3>Bizimle İletişime Geçin</h3>
+            <p>Hızlı yanıt almak için mail adresimize yazabilirsiniz.</p>
+            <a href="mailto:iletisim@ornekmail.com">Bize e-posta gönderin</a>
+          </div>
+    </section>
+    <!--aboutus-->
+    <section class="about" id="about">
+        <div class="about-img">
+              <img src="https://r.resimlink.com/iq8LpwuVz.png" >
+        </div>
+        <div class="about-text">
+              <h2>Geleceği Şekillendiriyor <br> İnovasyonla Sınırları Aşıyoruz </h2>
+              <p>TekÇip Teknoloji şirketi olarak, müşterilerimize özel çipler üretme ve kodlama konusunda uzmanız. İhtiyaçlarınıza özel tasarlanmış çipler ile size özgü çözümler sunuyoruz. Türkiye'deki sayılı şirketlerden biri olarak, teknoloji sektöründe öncü bir konumdayız. <br>
+                Ekibimiz, müşteri memnuniyetini en üst düzeyde tutmak için özveriyle çalışmaktadır. Tecrübeli ve uzman kadromuz, hızlı ve kaliteli hizmet sunarak projelerinizi zamanında ve istediğiniz standartlarda tamamlar. Sahip olduğumuz deneyim ve uzmanlık, çiplerin üretim sürecini optimize etmemizi ve en yüksek kalitede ürünler sunmamızı sağlar. Ekibimiz, teknoloji alanındaki gelişmeleri yakından takip eder ve yenilikçi çözümler üretme konusunda yeteneklidir. Size özel çipler üretme ve kodlama konusundaki başarılarımızı, deneyimli ekibimize borçluyuz <br>
+                TekÇip Teknoloji olarak, hızlı ve kaliteli hizmet sunma konusunda kendimize güveniyoruz. Müşterilerimizin zaman değerini önemsiyor ve projelerini belirlenen süre içinde tamamlamak için gereken çabayı gösteriyoruz. Her aşamada titizlikle çalışarak, müşterilerimize güvenilir ve istikrarlı bir iş ortağı olmayı sürdürüyoruz. </p> <br>
+              <a href="#" class="btn">Keşfet <i class="bx bx-right-arrow"></i></a>
+        </div>
+    </section>
+    <!--OurShop-->
+    <section class="shop" id="shop">
+        <div class="middle-text">
+            <h4>Hizmetlerimiz</h4>
+            <h2>Gelişime Yol Veren Teknoloji İnovatörü</h2>
+        </div>
+        <div class="shop-content">
+            <div class="row">
+                <img src="https://r.resimlink.com/PzDdv7Gjlc.png" >
+                <h3 align="center">ÇipBaşlangıç</h3>
+                <p align="center">"ÇipBaşlangıç" paketi, kişisel bilgiler içeren üye sayfası tasarımı, kendine has alan adı, SSL güvenlik sertifikası ve ana-yedek çip gibi özellikler sunar. Bu paket, web projenizi başlatmak veya geliştirmek için gerekli temel ve gelişmiş özellikleri bir araya getirir. TekÇip'in uzman ekibi, size hızlı ve etkili destek sağlamak için her zaman hazırdır.</p>
+                <div class="in-text">
+                    <div class="price">
+                      <h6><a href="#"class="dropan"><i class="bx bxs-info-circle"></i></a> Ön bilgilendirme </h6>
+                    </div>
+                    <div class="s-btnn">
+                        <a href="#">Sipariş Et</a>
+                    </div>
+                </div>
+                <br>
+                <div class="s-btnn">
+                    <a href="#chip1">Daha Fazla Bilgi Al </a>
+                </div>
+                <div class="top-icon">
+                    <a href="#"><i class="bx bx-heart"></i></a>
+                </div>
+            </div>
+            <div class="row">
+                <img src="https://r.resimlink.com/U-6Zoz9B.png" >
+                <h3 align="center">YenilikçiÇip</h3>
+                <p align="center"> "YenilikçiÇip" paketi, online varlığınızı güçlendirmek ve kişisel markanızı oluşturmak isteyenler için ideal bir seçenektir. Kişisel bilgilerinizi güvende tutarken, özgün bir alan adı ve güvenlik sertifikasıyla profesyonel bir çevrimiçi varlık oluşturmanızı sağlar. Ayrıca, şahıs özgeçmişi bölümüyle yeteneklerinizi ve deneyimlerinizi etkili bir şekilde sergileyebilirsiniz.</p>
+               <br>
+                <div class="in-text">
+                    <div class="price">
+                        <h6><a href="#" class="dropan"><i class="bx bxs-info-circle"></i></a> Ön bilgilendirme </h6>
+                    </div>
+                    <div class="s-btnn">
+                        <a href="#">Sipariş Et</a>
+                    </div>
+                </div>
+                <br>
+                <div class="s-btnn">
+                    <a href="#chip2">Daha Fazla Bilgi Al</a>
+                </div>
+                <div class="top-icon">
+                    <a href="#"><i class="bx bx-heart"></i></a>
+                </div>
+            </div>
+            <div class="row">
+                <img src="https://r.resimlink.com/pf9RrJsQuNZz.png" >
+                <h3 align="center">ProfesyonelÇip</h3>
+                <p align="center">
+                    Profesyonel Cip, yüksek performansı ve dayanıklılığıyla çevrimiçi varlığınızı güçlendirir. Güçlü sunucularıyla hızlı bir deneyim sunarken özelleştirme konusunda sınırsız olanaklar sunar. Gelişmiş güvenlik önlemleriyle verilerinizi korur ve analitik araçlarla sürekli iyileştirme imkanı sağlar. Profesyonel Cip, rakiplerinizden öne çıkmanızı ve başarıya ulaşmanızı sağlar. </p>
+                <br>
+                <div class="in-text">
+                    <div class="price">
+                        <h6><a href="#" class="dropan"><i class="bx bxs-info-circle"></i></a> Ön bilgilendirme </h6>
+                    </div>
+                    <div class="s-btnn">
+                        <a href="#">Sipariş Et</a>
+                    </div>
+                </div>
+                <br>
+                <div class="s-btnn">
+                    <a href="#chip3">Daha Fazla Bilgi Al</a>
+                </div>
+                <div class="top-icon">
+                    <a href="#"><i class="bx bx-heart"></i></a>
+                </div>
+            </div>
+            <div class="row">
+                <img src="https://r.resimlink.com/ueQon9HzDL.png" >
+                <h3 align="center">MaksimumÇip</h3>
+                <p align="center">
+                    MaksimumÇip, çevrimiçi varlığınızı sınırları zorlayarak en üst seviyeye taşıyan bir pakettir. Özelleştirilebilirlikte sınır tanımaz, güvenlik konusunda öncüdür ve yüksek performanslı sunucularıyla hızlı bir deneyim sunar. Analitik ve optimizasyon araçlarıyla sürekli iyileştirme imkanı sunar. MaksimumÇip ile çevrimiçi varlığınızı güçlendirin, rakiplerinizden öne çıkın ve başarıya ulaşın.</p>
+                <div class="in-text">
+                    <div class="price">
+                        <h6><a href="#" class="dropan"><i class="bx bxs-info-circle"></i></a> Ön bilgilendirme </h6>
+                    </div>
+                    <div class="s-btnn">
+                        <a href="#">Sipariş Et </a>
+                    </div>
+                </div>
+                <div class="top-icon">
+                    <a href="#"><i class="bx bx-heart"></i></a>
+                </div>
+                <br>
+                <div class="s-btnn">
+                    <a href="#chip4">Daha Fazla Bilgi Al</a>
+                </div>
+            </div>
+        </div>
+        <div class="row-btn">
+            <a href="#" class="btn">Keşfetmeye Başla <i class="bx bxs-right-arrow"></i></a>
+        </div>
+    </section>
+    <!--chip1-->
+    <section class="chip1" id="chip1">
+        <section class="chip1-0">
+            <div class="chip1-img">
+                <img src="https://r.resimlink.com/PzDdv7Gjlc.png"  >
+                <h2 align="center">ÇipBaşlangıç</h2>
+            </div>
+            <div class="chip1-text"  align="center">
+                <h2> Kişisel </h2>
+                <p>
+
+                    <a href="#" class="dropan"><i class="bx bxs-droplet-half"></i></a> Kişisel Bilgiler İçeren Üye Sayfası Tasarımı: Size özel bir web sayfası tasarlanır ve kişisel bilgilerinizi içeren bir üyelik sistemi oluşturulur. <br><br>
+                    <a href="#" class="dropan"><i class="bx bxs-droplet-half"></i></a> Kendine Has Domain: Kendi adınıza veya tercih ettiğiniz bir isimle alan adı kaydedilir. <br><br>
+                    <a href="#" class="dropan"><i class="bx bxs-droplet-half"></i></a> SSL Güvenlik Sertifikası: Web sitenizdeki trafiğin güvenliğini sağlamak için SSL sertifikası sağlanır. <br><br>
+                    <a href="#" class="dropan"><i class="bx bxs-droplet-half"></i></a> Bir Ana Çip ve Bir Yedek Çip: Web sitenizin daha güvenli ve kesintisiz çalışması için bir ana çip ve bir yedek çip sunulur. <br><br>
+                    
+                    <a href="#" class="dropan"><i class="bx bxs-droplet-half"></i></a> Geliştirilmiş Kullanıcı Arayüzü: Yenilenen arayüz, daha kullanıcı dostu ve kolay kullanılabilir bir deneyim sunar. <br><br>
+                    <a href="#" class="dropan"><i class="bx bxs-droplet-half"></i></a> Artırılmış Güvenlik Özellikleri: Yeni güvenlik önlemleri ve algoritmaları, web sitenizin güvenliğini daha da artırır. <br><br>
+                    <a href="#" class="dropan"><i class="bx bxs-droplet-half"></i></a> Mobil Uyumluluk: Web siteniz, farklı mobil cihazlarda sorunsuz bir şekilde görüntülenebilir ve kullanılabilir. <br><br>
+                <a align="center" href="#" class="btn">Sipariş Et <i class="bx bx-right-arrow"></i></a>
+            </div>
+        </section> 
+        <section class="chip1-1">
+            <div class="chip1-img">
+                <img src="https://r.resimlink.com/OSmvr.png" >
+                <h2 align="center">ÇipBaşlangıç</h2>
+            </div>
+            <div class="chip1-text" align="center">
+                <h2> Kimler için daha uygundur </h2>
+                <p><h3>Bütçe Dostu Çözüm Arayanlar:</h3>
+                    "ÇipBaşlangıç" paketi, uygun fiyatıyla öne çıkar ve düşük bütçeye sahip olan kullanıcılar veya küçük işletmeler için mükemmel bir seçenektir. Bu paket sayesinde web varlığınızı uygun maliyetle oluşturabilir ve geliştirebilirsiniz. <br><br>
+                    
+                    <h3>Küçük Ölçekli Projeler:</h3>
+                    Kendi işinizi veya kişisel projelerinizi başlatmak isteyenler için "ÇipBaşlangıç" paketi ideal bir çözümdür. Bu paket, projenize özel bir web sayfası tasarımı ve üye sayfası oluşturma imkanı sunarak online varlığınızı güçlendirmenize yardımcı olur. Bu şekilde, hedef kitlenize ulaşabilir ve projenizin büyümesine katkıda bulunabilirsiniz. <br><br>
+                    
+                    <h3>Başlangıç Düzeyindeki Kullanıcılar:</h3>
+                    Web dünyasında yeni olan veya sınırlı teknik bilgiye sahip olan kişiler için "ÇipBaşlangıç" paketi ideal bir seçenektir. Adım adım rehberlik ve kullanıcı dostu arayüzü sayesinde web sitesi oluşturma sürecini basitleştirir. Bu paket, kullanıcıların web varlığını hızlı ve kolay bir şekilde başlatmasına yardımcı olur.</p> <br>
+                <a href="#" class="btn"> Sipariş Et <i class="bx bx-right-arrow"></i></a>
+            </div>
+        </section>
+    </section>
+       <!--chip2-->
+       <section class="chip2" id="chip2">
+        <section class="chip2-0">
+            <div class="chip2-img">
+                <img src="https://r.resimlink.com/U-6Zoz9B.png"  >
+                <h2 align="center">YenilikçiÇip</h2>
+            </div>
+            <div class="chip2-text"  align="center">
+                <h2> Kişisel </h2>
+                <p>
+
+                    <a href="#" class="dropan"><i class="bx bxs-droplet-half"></i></a> Kişisel Bilgiler İçeren Üye Sayfası Tasarımı: Size özel bir web sayfası tasarlanır ve kişisel bilgilerinizi içeren bir üyelik sistemi oluşturulur. <br><br>
+                    <a href="#" class="dropan"><i class="bx bxs-droplet-half"></i></a> Kendine Has Domain: Kendi adınıza veya tercih ettiğiniz bir isimle alan adı kaydedilir. <br><br>
+                    <a href="#" class="dropan"><i class="bx bxs-droplet-half"></i></a> SSL Güvenlik Sertifikası: Web sitenizdeki trafiğin güvenliğini sağlamak için SSL sertifikası sağlanır. <br><br>
+                    <a href="#" class="dropan"><i class="bx bxs-droplet-half"></i></a> Bir Ana Çip ve Bir Yedek Çip: Web sitenizin daha güvenli ve kesintisiz çalışması için bir ana çip ve bir yedek çip sunulur. <br><br>
+                    <a href="#" class="dropan"><i class="bx bxs-droplet-half"></i></a> "ÇipBaşlangıç" paketi, web sitenizin güvenli ve kesintisiz çalışması için bir ana çip, bir yardımcı çip ve bir yedek hak sunar. Bu özellikler sayesinde web sitenizin performansı artar, sorunlar hızlıca çözülür ve kullanıcılarınıza kesintisiz bir deneyim sağlanır. <br><br>
+                    <a href="#" class="dropan"><i class="bx bxs-droplet-half"></i></a> Şahıs Özgeçmişi: İş deneyimlerinizi, eğitim bilgilerinizi ve ilgi alanlarınızı içeren ayrıntılı bir şahıs özgeçmişi bölümüne sahip olursunuz. Böylece potansiyel işverenler veya iş bağlantıları sizi daha iyi tanıyabilir ve iletişim kurabilir. <br><br>
+
+                    <a href="#" class="dropan"><i class="bx bxs-droplet-half"></i></a> Kapsamlı Bilgi Paylaşımı: Şu anda ilgilendiğiniz iş hakkında detaylı bilgileri paylaşabilirsiniz. Bu, potansiyel işverenlerin veya iş ortaklarının sizinle ilgili daha fazla bilgi edinmesine yardımcı olur. <br><br>
+                <a align="center" href="#" class="btn">Sipariş Et <i class="bx bx-right-arrow"></i></a>
+            </div>
+        </section> 
+        <section class="chip2-1">
+            <div class="chip2-img">
+                <img src="https://r.resimlink.com/OSmvr.png" >
+                <h2 align="center">YenilikçiÇip</h2>
+            </div>
+            <div class="chip2-text" align="center">
+                <h2> Kimler için daha uygundur </h2>
+                <p> <h3>Küçük İşletmeler ve Girişimciler: </h3>
+                    İşletmesini başlatmak veya çevrimiçi varlığını güçlendirmek isteyen küçük işletme sahipleri ve girişimciler için bu paket idealdir. Uygun maliyeti ve temel özellikleri sayesinde web sitesi oluşturmak ve markalarını çevrimiçi ortamda tanıtmak isteyen bu kullanıcılar için "ÇipBaşlangıç" paketi, işlerini büyütmeleri için önemli bir adımdır. <br><br>
+
+                    <h3>Bireysel Projeler ve Portfolyolar:</h3>
+                    Kişisel projeler üzerinde çalışan sanatçılar, yazarlar, tasarımcılar ve diğer yaratıcı profesyoneller için "ÇipBaşlangıç" paketi uygun bir seçenektir. Kendi yeteneklerini ve çalışmalarını sergilemek, potansiyel müşteriler ve iş fırsatlarıyla bağlantı kurmak isteyen bu kullanıcılar için paketin özellikleri etkili bir şekilde kullanılabilir. <br><br>
+                   
+                    <h3>Başlangıç Düzeyindeki Kullanıcılar:</h3>
+                    Web dünyasında yeni olan veya sınırlı teknik bilgiye sahip olan kullanıcılar için "ÇipBaşlangıç" paketi idealdir. Adım adım rehberlik ve kullanıcı dostu arayüzü sayesinde web sitesi oluşturma süreci basitleştirilir. Bu kullanıcılar, hızlı bir şekilde çevrimiçi varlık oluşturabilir ve web sitelerini yönetme konusunda güven kazanabilirler. <br><br></p>
+                <a href="#" class="btn"> Sipariş Et <i class="bx bx-right-arrow"></i></a>
+            </div>
+        </section>
+    </section>
+      <!--chip3-->
+      <section class="chip2" id="chip2">
+        <section class="chip2-0">
+            <div class="chip2-img">
+                <img src="https://r.resimlink.com/pf9RrJsQuNZz.png"  >
+                <h2 align="center">ProfesyonelÇip</h2>
+            </div>
+            <div class="chip2-text"  align="center">
+                <h2> Kişisel </h2>
+                <p>
+
+                    <a href="#" class="dropan"><i class="bx bxs-droplet-half"></i></a> Kişisel Bilgiler İçeren Üye Sayfası Tasarımı: Size özel bir web sayfası tasarlanır ve kişisel bilgilerinizi içeren bir üyelik sistemi oluşturulur. <br><br>
+                    <a href="#" class="dropan"><i class="bx bxs-droplet-half"></i></a> Kendine Has Domain: Kendi adınıza veya tercih ettiğiniz bir isimle alan adı kaydedilir. <br><br>
+                    <a href="#" class="dropan"><i class="bx bxs-droplet-half"></i></a> SSL Güvenlik Sertifikası: Web sitenizdeki trafiğin güvenliğini sağlamak için SSL sertifikası sağlanır. <br><br>
+                    <a href="#" class="dropan"><i class="bx bxs-droplet-half"></i></a> Kapsamlı Sayfa: Paket içerisinde yer alan özel bir sayfa, kurumunuzun geçmişi hakkında ayrıntılı bilgi sunar. Bu sayfada kurumunuzun başarıları, projeleri ve deneyimleri kapsamlı bir şekilde anlatılır. Potansiyel müşteriler ve iş ortakları, kurumunuz hakkında daha fazla bilgi edinmek için bu sayfayı kullanabilir. <br><br>
+                    <a href="#" class="dropan"><i class="bx bxs-droplet-half"></i></a>İki Premium Çip: "ProfesyonelÇip" paketi, kurumunuzun web sitesi için iki premium çip sunar. Birincisi, tanıtım amacıyla kullanılır ve kurumunuzun kendisini etkileyici bir şekilde tanıtmasına olanak sağlar. İkincisi, veri aktarımı için kullanılır ve kurumunuzun büyük miktarda veriyi güvenli bir şekilde depolamasına yardımcı olur. <br><br>
+                    <a href="#" class="dropan"><i class="bx bxs-droplet-half"></i></a>Tam Set Şansı: Bu paket, size birbirini tamamlayan iki premium çipin yanı sıra komple bir set sunar. Bu set, kurumunuzun tüm bilgilerini ve projelerini depolama ve güncelleme imkanı sağlar. Böylece kurumunuz, çevrimiçi varlığınızı etkili bir şekilde yönetebilir ve gelecekteki büyüme için sağlam bir temel oluşturabilir. <br><br>
+                    <a align="center" href="#" class="btn">Sipariş Et <i class="bx bx-right-arrow"></i></a>
+            </div>
+        </section> 
+        <section class="chip2-1">
+            <div class="chip2-img">
+                <img src="https://r.resimlink.com/OSmvr.png" >
+                <h2 align="center">ProfesyonelÇip</h2>
+            </div>
+            <div class="chip2-text" align="center">
+                <h2> Kimler için daha uygundur </h2>
+                <p> <h3>Kurumsal Şirketler:</h3>
+                     Büyük ölçekli şirketler, "ProfesyonelÇip" paketini kullanarak çevrimiçi varlıklarını güçlendirebilir. Bu paket, şirketin geçmişi, projeleri, başarıları ve hizmetleri gibi bilgileri kapsamlı bir şekilde sunarak potansiyel müşterilere etkileyici bir izlenim bırakır. <br><br>
+
+                    <h3>Ajanslar ve Danışmanlık Firmaları:</h3> 
+                    Reklam ajansları, dijital pazarlama firmaları, danışmanlık şirketleri gibi profesyonel hizmet sağlayıcılar, "ProfesyonelÇip" paketi sayesinde müşterilerine sundukları hizmetleri etkili bir şekilde tanıtabilirler. Bu paket, projeleri sergileme ve portfolyo oluşturma konusunda özellikler sunarak kurumunuzun uzmanlık alanını vurgular. <br><br>
+                    
+                    <h3>Sanat Endüstrisi:</h3> 
+                    Sanatçılar, tasarımcılar, müzisyenler ve diğer yaratıcı profesyoneller, "ProfesyonelÇip" paketi ile çalışmalarını çevrimiçi olarak sergileyebilirler. Bu paket, sanatsal projeleri görsel olarak sunma, müzik ve videoları paylaşma gibi özelliklerle sanatçıların kendilerini ifade etmelerine olanak tanır. <br><br>
+                    
+                    <h3>Yaratıcı Endüstri:</h3> 
+                    Eğitim Kurumları: Üniversiteler, kolejler, eğitim kurumları, "ProfesyonelÇip" paketini kullanarak kurumlarının tanıtımını yapabilir ve öğrencilere detaylı bilgiler sunabilirler. Bu paket, kurumun eğitim programları, akademik başarıları ve öğrenci kaynakları gibi bilgileri paylaşma imkanı sağlar. <br></p>
+                <a href="#" class="btn"> Sipariş Et <i class="bx bx-right-arrow"></i></a>
+            </div>
+        </section>
+    </section>
+        <!--chip4-->
+        <section class="chip3" id="chip3">
+            <section class="chip3-0">
+                <div class="chip3-img">
+                    <img src="https://r.resimlink.com/ueQon9HzDL.png"  >
+                    <h2 align="center">MaksimumÇip</h2>
+                </div>
+                <div class="chip3-text"  align="center">
+                    <h2> Kişisel </h2>
+                    <p>
+    
+                        <a href="#" class="dropan"><i class="bx bxs-droplet-half"></i></a> Kişisel Bilgiler İçeren Üye Sayfası Tasarımı: Size özel bir web sayfası tasarlanır ve kişisel bilgilerinizi içeren bir üyelik sistemi oluşturulur. <br><br>
+                        <a href="#" class="dropan"><i class="bx bxs-droplet-half"></i></a> Kendine Has Domain: Kendi adınıza veya tercih ettiğiniz bir isimle alan adı kaydedilir. <br><br>
+                        <a href="#" class="dropan"><i class="bx bxs-droplet-half"></i></a> SSL Güvenlik Sertifikası: Web sitenizdeki trafiğin güvenliğini sağlamak için SSL sertifikası sağlanır. <br><br>
+                        <a href="#" class="dropan"><i class="bx bxs-droplet-half"></i></a> Kapsamlı Sayfa: Paket içerisinde yer alan özel bir sayfa, kurumunuzun geçmişi hakkında ayrıntılı bilgi sunar. Bu sayfada kurumunuzun başarıları, projeleri ve deneyimleri kapsamlı bir şekilde anlatılır. Potansiyel müşteriler ve iş ortakları, kurumunuz hakkında daha fazla bilgi edinmek için bu sayfayı kullanabilir. <br><br>
+                        <a href="#" class="dropan"><i class="bx bxs-droplet-half"></i></a>Tam Set Şansı: Bu paket, size birbirini tamamlayan iki premium çipin yanı sıra komple bir set sunar. Bu set, kurumunuzun tüm bilgilerini ve projelerini depolama ve güncelleme imkanı sağlar. Böylece kurumunuz, çevrimiçi varlığınızı etkili bir şekilde yönetebilir ve gelecekteki büyüme için sağlam bir temel oluşturabilir. <br><br>
+                        <a href="#" class="dropan"><i class="bx bxs-droplet-half"></i></a> Tanıtım Amaçlı Premium Çip: İlk premium çip, kurumunuzun kendini etkileyici bir şekilde tanıtmasını sağlar. Misyonunuz, vizyonunuz, başarılarınız ve hizmetleriniz gibi bilgileri vurgulayarak potansiyel müşterilerinize güçlü bir izlenim bırakabilirsiniz. <br><br>
+                        <a href="#" class="dropan"><i class="bx bxs-droplet-half"></i></a>Veri Aktarımı İçin Premium Çip: İkinci premium çip, büyük miktarda veriyi güvenli bir şekilde depolamanızı sağlar. Müşteri bilgileri, işlemler, dosyalar ve diğer önemli verileri saklayabilir ve güvenli bir şekilde erişebilirsiniz. <br><br>
+                        <a href="#" class="dropan"><i class="bx bxs-droplet-half"></i></a>İki Kez Yılda Çip Değişimi: "ProfesyonelÇip" paketi, size yılda iki kez çip değiştirme imkanı sunar. Bu özellik sayesinde, olası çip kaybı, hasar veya bozulma durumlarında çipleri güncelleyebilir ve web sitenizin sorunsuz bir şekilde çalışmasını sağlayabilirsiniz. <br><br>
+                        <a align="center" href="#" class="btn">Sipariş Et <i class="bx bx-right-arrow"></i></a>
+                </div>
+            </section> 
+            <section class="chip3-1">
+                <div class="chip3-img">
+                    <img src="https://r.resimlink.com/OSmvr.png" >
+                    <h2 align="center">MaksimumÇip</h2>
+                </div>
+                <div class="chip3-text" align="center">
+                    <h2> Kimler için daha uygundur </h2>
+                    <p> <h3>Kurumsal Şirketler:</h3>
+                        Büyük ölçekli şirketler, "ProfesyonelÇip" paketini kullanarak çevrimiçi varlıklarını güçlendirebilir. Bu paket, şirketin geçmişi, projeleri, başarıları ve hizmetleri gibi bilgileri kapsamlı bir şekilde sunarak potansiyel müşterilere etkileyici bir izlenim bırakır. <br><br>
+    
+                        <h3>Turizm Acenteleri:</h3>
+                        Turizm sektöründe faaliyet gösteren acenteler, müşterilerine çeşitli turistik hizmetleri etkileyici bir şekilde sunmak ve müşteri bilgilerini güvenli bir şekilde saklamak için bu özelliği kullanabilirler. Tanıtım amaçlı premium çip, tatil paketleri, otel rezervasyonları ve diğer hizmetlerin tanıtımında kullanılabilir. <br><br>
+                        
+                        <h3>Kafe Zincirleri:</h3>
+                        Kafe zincirleri, müşterilerine özel indirimler, sadakat programları ve diğer avantajlar sunmak için bu özelliği kullanabilirler. Aynı zamanda, veri aktarımı için premium çip sayesinde müşteri siparişleri, ödemeler ve diğer veriler güvenli bir şekilde depolanabilir. <br><br>
+
+                        <h3>İş İnsanları ve Girişimciler: </h3> 
+                        Büyük iş adamları ve girişimciler, kendi kişisel markalarını veya işletmelerini etkileyici bir şekilde tanıtmak için bu özelliği tercih edebilirler. Tanıtım amaçlı premium çip, başarılarını ve uzmanlıklarını vurgulayarak iş dünyasında güçlü bir itibar oluşturmalarına yardımcı olur. <br><br>
+
+                        <h3>Yatırımcılar ve Şirket Sahipleri:</h3> 
+                        Yatırımcılar ve şirket sahipleri, portföylerini ve şirketlerini etkileyici bir şekilde sunmak için bu özelliği kullanabilirler. Veri aktarımı için premium çip, mali verileri güvenli bir şekilde saklamalarını ve yatırım kararları için gerekli bilgilere hızlı erişim sağlamalarını sağlar. <br><br>
+
+                        <h3>Sanat Endüstrisi:</h3> 
+                        Sanatçılar, tasarımcılar, müzisyenler ve diğer yaratıcı profesyoneller, "ProfesyonelÇip" paketi ile çalışmalarını çevrimiçi olarak sergileyebilirler. Bu paket, sanatsal projeleri görsel olarak sunma, müzik ve videoları paylaşma gibi özelliklerle sanatçıların kendilerini ifade etmelerine olanak tanır. <br><br>
+                        
+                        <h3>Yaratıcı Endüstri:</h3> 
+                        Eğitim Kurumları: Üniversiteler, kolejler, eğitim kurumları, "ProfesyonelÇip" paketini kullanarak kurumlarının tanıtımını yapabilir ve öğrencilere detaylı bilgiler sunabilirler. Bu paket, kurumun eğitim programları, akademik başarıları ve öğrenci kaynakları gibi bilgileri paylaşma imkanı sağlar. <br></p>
+                    <a href="#" class="btn"> Sipariş Et <i class="bx bx-right-arrow"></i></a>
+                </div>
+            </section>
+        </section>
+    <!--Reviews-->
+    <section class="review" id="review">
+         <div class="middle-text" align="center">
+             <h2>Yeni Müşteri Geri Dönüşleri: Memnuniyetimizi Paylaşanlar </h2>
+             <h4>Her ay 100'e yakın akıllıca seçilmiş siparişle hızlı teslimat sağladığımız projelerimizle, içlerinden özenle seçtiğimiz paylaşımlar yapıyoruz.</h4>
+
+         </div>
+         <div class="review-content">
+             <div class="box">
+                 <p align="center"> Size bu mesajı, çiplerinizle ilgili büyük bir memnuniyetimizi iletmek için yazıyorum. Şirketinizin ürettiği çipler, iş çevremizde bizi çok güzel temsil ediyor ve gerçekten takdire şayan bir performans sergiliyorlar. <br>
+
+                    TekÇip'i seçtiğimiz için gerçekten çok mutluyuz. Sizinle işbirliği yapmaktan ve ürünlerinizi kullanmaktan büyük bir keyif alıyoruz. Çiplerinizin kalitesi, güvenilirliği ve performansı, işimizi geliştirmemize yardımcı oluyor ve bizi rakiplerimizden bir adım öne taşıyor. <br>
+                    
+                    Şirketinizin profesyonel ekibinin, teknolojik yeniliklere olan bağlılığı ve müşteri odaklı yaklaşımı, bizi her seferinde etkiliyor. Sizlerle çalışmak, her zaman sorunsuz bir deneyim sunuyor ve güvenilir bir ortak olduğunuzu hissettiriyor. <br>
+                    
+                    TekÇip ile devam eden işbirliğimiz, başarılarımızı artırmada kritik bir rol oynuyor. Sizlere olan güvenimiz tam ve gelecekteki projelerimizde de yanınızda olmaktan mutluluk duyacağız. <br>
+                    
+                    Tekrar teşekkür ederim ve harika ürünlerinizle bizi desteklemeye devam ettiğiniz için minnettarız.
+                    
+                    En içten selamlarımızla </p>
+                 <p>Rusya</p>
+                 <p> *Memnuniyet mesajı yukarıda türkçeye çevirilmiştir</p>
+                 <div class="in-box">
+                     <div class="bx-img">
+                        <img src="https://r.resimlink.com/UZcsKzM_7HN.png" >
+                     </div>
+                     <div class="bxx-text">
+                          <h4>Анастасия Иванова Петрова</h4>
+                          <h5>Агентство по развитию туризма России</h5>
+                          <h5>MaksimumÇip - Kurumsal</h5>
+                          <div class="ratings">
+                            <a href="#"><i class="bx bxs-star"></i></a>
+                            <a href="#"><i class="bx bxs-star"></i></a>
+                            <a href="#"><i class="bx bxs-star"></i></a>
+                            <a href="#"><i class="bx bxs-star"></i></a>
+                            <a href="#"><i class="bx bxs-star"></i></a>
+                          </div>
+                     </div>
+                 </div>
+             </div>
+             <div class="box">
+                <p> Müze müdürü olarak, TekÇip çiplerinden çok memnunuz ve iş çevremizdeki temsiliyetleri gerçekten mükemmel. Sizinle çalışmaya başladığımızdan beri, ürünlerinizin kalitesi ve performansı bizi her seferinde etkilemekte ve ziyaretçilerimize olağanüstü bir deneyim sunmamızı sağlamaktadır. <br>
+
+                    TekÇip'i seçtiğimiz için gerçekten şanslıyız. Şirketinizin profesyonel ekibi, bize sürekli destek sağlamakta ve herhangi bir sorun yaşamadan işbirliğimizi sürdürmemizi sağlamaktadır. Teknolojik yeniliklere olan bağlılığınız ve müşteri odaklı yaklaşımınız, sizinle çalışmayı çok keyifli hale getirmektedir. <br>
+                    
+                    Sizinle olan işbirliğimiz, müzemizin başarısını artırmak için kritik bir rol oynamaktadır. TekÇip ürünleri, koleksiyonlarımızın korunmasına yardımcı olmakta ve ziyaretçilerimize unutulmaz deneyimler sunmaktadır. <br>
+                    
+                    Size duyduğumuz güven ve memnuniyet tamdır ve gelecekteki projelerimizde de sizinle birlikte çalışmaktan büyük mutluluk duyacağız. <br>
+                    
+                    Tekrar teşekkür ederim ve bizi harika ürünlerinizle desteklediğiniz için minnettarız. <br>
+                    
+                    En iyi dileklerimle,</p>
+                    <p>Azerbaycan</p>
+                    <p> *Memnuniyet mesajı yukarıda türkçeye çevirilmiştir</p>
+                <div class="in-box">
+                    <div class="bx-img">
+                       <img src="https://r.resimlink.com/2RrbU.png" >
+                    </div>
+                    <div class="bxx-text">
+                         <h4>Vüqar Mustafayev</h4>
+                         <h5> Şəki Tarix-Diyarşünaslıq Muzeyi</h5>
+                         <h5>ProfesyonelÇip - Kurumsal</h5>
+                         <div class="ratings">
+                           <a href="#"><i class="bx bxs-star"></i></a>
+                           <a href="#"><i class="bx bxs-star"></i></a>
+                           <a href="#"><i class="bx bxs-star"></i></a>
+                           <a href="#"><i class="bx bxs-star"></i></a>
+                           <a href="#"><i class="bx bxs-star"></i></a>
+                         </div>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <p> Size bu mesajı, restoran zincirimizde TekÇip ürünlerinin kullanımıyla ilgili büyük bir memnuniyetimizi ifade etmek için yazıyorum. <br>
+
+                    Çok memnun olduğumuzu belirtmek isterim. TekÇip çiplerinden gerçekten çok etkilendik ve iş çevremizde bizi harika bir şekilde temsil ediyorlar. Sizinle çalışmaya başladığımızdan beri, ürünlerinizin kalitesi ve performansı, restoranlarımızın operasyonlarında büyük bir fark yaratıyor. <br>
+                    
+                    TekÇip'i tercih ettiğimiz için gerçekten şanslıyız. Şirketinizin yenilikçi yaklaşımı ve müşteri odaklı hizmetiniz, her seferinde sorunsuz bir işbirliği deneyimi sunuyor. Personelimiz, TekÇip ürünlerinin kullanımı ve destek hizmetinizle ilgili geri bildirimlerle bizi sürekli olarak memnun etmektedir. <br>
+                    
+                    Restoran zincirimizin başarısı için TekÇip ile olan işbirliğimiz kritik bir rol oynamaktadır. Ürünleriniz, hızlı ve güvenilir hizmet sunmamızı sağlamakta ve müşterilerimize en iyi deneyimi sunmamızı desteklemektedir. <br>
+                    
+                    Sizlere olan güvenimiz tamdır ve gelecekteki projelerimizde de sizinle birlikte çalışmaktan büyük mutluluk duyacağız. TekÇip'in yenilikçi ürünleri ve müşteri odaklı yaklaşımı, restoran zincirimizin büyümesine ve müşteri sadakatine katkıda bulunmaktadır. <br>
+                    
+                    Tekrar teşekkür ederim ve bizi harika ürünlerinizle desteklediğiniz için minnettarız. <br>
+                    
+                    Saygılarımla,</p>
+                    <p>Türkiye</p>
+                <div class="in-box">
+                    <div class="bx-img">
+                       <img src="https://r.resimlink.com/8pOs5tCLxG.png" >
+                    </div>
+                    <div class="bxx-text">
+                         <h4>Ayşe Öztürk</h4>
+                         <h5>Gurme Zevkler </h5>
+                         <h5>ProfesyonelÇip - Kurumsal</h5>
+                         <div class="ratings">
+                           <a href="#"><i class="bx bxs-star"></i></a>
+                           <a href="#"><i class="bx bxs-star"></i></a>
+                           <a href="#"><i class="bx bxs-star"></i></a>
+                           <a href="#"><i class="bx bxs-star"></i></a>
+                           <a href="#"><i class="bx bxs-star"></i></a>
+                         </div>
+                    </div>
+                </div>
+            </div>
+         </div>
+    </section>
+    <section class="end">
+        <div class="middle-text" align="center">   
+         <p>Tüm Hakları TekÇip Şirketi'ne aittir. Tüm hakları saklıdır © 2020-2023.</p>
+         <p align="center">Bu site, TekÇip Şirketi tarafından 2020 yılından beri kurulmuş olup tüm hakları korunmaktadır.</p>
+         <br>
+        </div>
+     </section>
+    <!--ScrollTop-->
+    <a href="#" class="scroll">
+         <i class="bx bx-up-arrow-alt"></i>
+    </a>
+    <script src="https://unpkg.com/scrollreveal"></script>
+</body>
+</html>
+<script>
+    const header = document.querySelector("header");
+
+    let menu = document.querySelector('#menu-icon');
+    let navlist = document.querySelector('.navlist');
+
+    menu.onclick = () => {
+        menu.classList.toggle('bx-x');
+        navlist.classList.toggle('open');
+    }
+    window.onscroll = () =>{
+        menu.classList.remove('bx-x');
+        navlist.classList.remove('open');
+    }
+
+    const sr = ScrollReveal({
+        origin:'top',
+        distance: '85px',
+        duration: 2500,
+        reset: true
+    })
+    sr.reveal ('.home-text',{delay:300});
+    sr.reveal ('.home-img',{delay:400});
+    sr.reveal ('.container',{delay:400});
+    sr.reveal ('.about-img',{});
+    sr.reveal ('.about-text',{delay:300});
+    sr.reveal('.chip1 .chip1-0',{delay:300});
+    sr.reveal('.chip1 .chip1-1',{delay:300});
+    sr.reveal('.chip2 .chip2-0',{delay:300});
+    sr.reveal('.chip2 .chip2-1',{delay:300});
+    sr.reveal('.chip3 .chip3-0', {delay:300});
+    sr.reveal('.chip3 .chip3-1',{delay:300});
+    sr.reveal('.chip4 .chip4-0',{delay:300});
+    sr.reveal('.chip4 .chip4-1',{delay:300});
+    sr.reveal ('.middle-text',{});
+    sr.reveal ('.row-btn,.shop-content',{delay:300});
+    sr.reveal ('.review, .review-content',{delay:300});
+</script>
