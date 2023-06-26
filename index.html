@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tek Çip</title>
+    <title>TekÇip</title>
     <link rel="icon" type="image/x-icon" href="icon.ico">
     <!--Ikon Paketleri-->
     <link rel="stylesheet"
@@ -58,21 +58,17 @@
         .logo{
             display: flex;
             align-items: center;
-            margin-top: -30px;
-          
+            color: var(--text-color);
+            font-size: 33px;
+            font-weight: 700;
         }
         .logo i{
             vertical-align: middle;
             margin-right: 8px;
             color: var(--main-color);
         }
-        .logo-img{
-            opacity: 60%;
-        }
-        
         .navlist{
             display: flex;
-            margin-top: -30px;
         }
         .navlist a{
             color: var(--text-color);
@@ -94,7 +90,6 @@
             background: var(--main-color);
             border-radius: 3rem;
             box-shadow: #ff9f0d 0px 1px 25px;
-            margin-top: -30px;
         }
         .nav-icons i{
             vertical-align: middle;
@@ -119,7 +114,6 @@
             padding: 70px 14% 60px;
         }
         .home{
-            margin-top: 50px;
             position: relative;
             height: 100vh;
             width: 100%;
@@ -660,22 +654,20 @@
                 --big-font: 2.8rem;
                 --h2-font: 2rem;
             }
+            .logo{
+                margin-top: -40px;
+                margin-right: -40px;
+                margin-left: -40px;
+            }
+            .nav-icons{
+                margin-top: -40px;
+            }
             .home{
                  height: 110vh;
                  gap: 0.1rem;
             }
             .shop{
                 min-width: 320px;
-            }
-            .logo{
-                margin-right: -270px;
-            }
-            .nav-icons{
-                margin-top: -50px;
-                margin-right: 7px;
-            }
-            .logo-img{
-                opacity: 90%;
             }
             .row{
                 min-width: 320px;
@@ -744,11 +736,7 @@
 </head>
 <body>
     <header>
-         <a href="#" class="logo">
-            <div class="logo-img">
-                <img src="https://r.resimlink.com/VxeBM.png" ></a>
-            </div>
-            </a>
+         <a href="#" class="logo"><img src="icon.ico" alt=""></a>
          <ul class="navlist">
              <li><a href="#home" class="active">Ana Sayfa</a></li>
              <li><a href="#about">Hakkımızda</a></li>
