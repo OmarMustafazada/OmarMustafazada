@@ -572,31 +572,32 @@
                 height: 85vh;
             }
         }
-        @media (max-width: 1060px){
-            #menu-icon{
-                display: initial;  
+        @media (max-width: 480px) {
+             #menu-icon {
+              display: initial;
             }
-            .navlist{
-                position: absolute;
-                top: -1000px;
-                width: 390px;
-                left: 0;
-                display: flex;
-                flex-direction: column;
-                text-align: left;
-                background: var(--other-color);
-                transition: all .45s ease;
-            }
-            .navlist a{
-                display: block;
-                padding: 0.5rem;
-                margin: 1rem;
-                border-left: 2px solid var(--main-color);
-            }
-            .navlist.open{
-                top: 100%;
-            }
-        }
+  .navlist {
+    position: absolute;
+    top: -1000px;
+    width: 390px;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    background: var(--other-color);
+    transition: all 0.45s ease;
+  }
+  .navlist a {
+    display: block;
+    padding: 0.5rem;
+    margin: 1rem;
+    border-left: 2px solid var(--main-color);
+  }
+  .navlist.open {
+    top: 100%;
+  }
+}
+
         @media(max-width: 1045px){
             :root{
                 --big-font: 3.3rem;
