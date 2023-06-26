@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TekÇip</title>
+    <title>Tek Çip</title>
+    <link rel="icon" type="image/x-icon" href="icon.ico">
     <!--Ikon Paketleri-->
     <link rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
@@ -57,17 +58,21 @@
         .logo{
             display: flex;
             align-items: center;
-            color: var(--text-color);
-            font-size: 33px;
-            font-weight: 700;
+            margin-top: -30px;
+          
         }
         .logo i{
             vertical-align: middle;
             margin-right: 8px;
             color: var(--main-color);
         }
+        .logo-img{
+            opacity: 60%;
+        }
+        
         .navlist{
             display: flex;
+            margin-top: -30px;
         }
         .navlist a{
             color: var(--text-color);
@@ -89,6 +94,7 @@
             background: var(--main-color);
             border-radius: 3rem;
             box-shadow: #ff9f0d 0px 1px 25px;
+            margin-top: -30px;
         }
         .nav-icons i{
             vertical-align: middle;
@@ -113,6 +119,7 @@
             padding: 70px 14% 60px;
         }
         .home{
+            margin-top: 50px;
             position: relative;
             height: 100vh;
             width: 100%;
@@ -727,12 +734,17 @@
 </head>
 <body>
     <header>
-         <a href="#" class="logo"><i class="bx bxs-home"></i>TekÇip</a>
+         <a href="#" class="logo">
+            <div class="logo-img">
+                <img src="https://r.resimlink.com/VxeBM.png" ></a>
+            </div>
+            </a>
          <ul class="navlist">
              <li><a href="#home" class="active">Ana Sayfa</a></li>
              <li><a href="#about">Hakkımızda</a></li>
              <li><a href="#shop">Hizmetlerimiz</a></li>
              <li><a href="#review"> Yeni Geri Dönüşler</a></li>
+             
          </ul>
          <div class="nav-icons">
               <a href="#"><i class="bx bx-search"></i></a>
@@ -744,8 +756,8 @@
     <section class="home" id="home">
           <div class="home-text">
              <h1>Teknolojiyle <span>Geleceği</span> Şekillendiriyor <br> <span>İnovasyonla</span> Sınırları Aşıyoruz </h1>
-             <a href="#" class="btn">Keşfet <i class="bx bx-right-arrow"></i></a>
-             <a href="#" class="btn2">Sipariş ver</a>
+             <a href="#about" class="btn">Keşfet <i class="bx bx-right-arrow"></i></a>
+             <a href="#shop" class="btn2">Sipariş ver</a>
           </div>
           <div class="home-img">
              <img src="https://r.resimlink.com/WZ9JBKN2igmq.png" >
@@ -777,7 +789,7 @@
               <p>TekÇip Teknoloji şirketi olarak, müşterilerimize özel çipler üretme ve kodlama konusunda uzmanız. İhtiyaçlarınıza özel tasarlanmış çipler ile size özgü çözümler sunuyoruz. Türkiye'deki sayılı şirketlerden biri olarak, teknoloji sektöründe öncü bir konumdayız. <br>
                 Ekibimiz, müşteri memnuniyetini en üst düzeyde tutmak için özveriyle çalışmaktadır. Tecrübeli ve uzman kadromuz, hızlı ve kaliteli hizmet sunarak projelerinizi zamanında ve istediğiniz standartlarda tamamlar. Sahip olduğumuz deneyim ve uzmanlık, çiplerin üretim sürecini optimize etmemizi ve en yüksek kalitede ürünler sunmamızı sağlar. Ekibimiz, teknoloji alanındaki gelişmeleri yakından takip eder ve yenilikçi çözümler üretme konusunda yeteneklidir. Size özel çipler üretme ve kodlama konusundaki başarılarımızı, deneyimli ekibimize borçluyuz <br>
                 TekÇip Teknoloji olarak, hızlı ve kaliteli hizmet sunma konusunda kendimize güveniyoruz. Müşterilerimizin zaman değerini önemsiyor ve projelerini belirlenen süre içinde tamamlamak için gereken çabayı gösteriyoruz. Her aşamada titizlikle çalışarak, müşterilerimize güvenilir ve istikrarlı bir iş ortağı olmayı sürdürüyoruz. </p> <br>
-              <a href="#" class="btn">Keşfet <i class="bx bx-right-arrow"></i></a>
+              <a href="#shop" class="btn">Keşfet <i class="bx bx-right-arrow"></i></a>
         </div>
     </section>
     <!--OurShop-->
@@ -793,7 +805,7 @@
                 <p align="center">"ÇipBaşlangıç" paketi, kişisel bilgiler içeren üye sayfası tasarımı, kendine has alan adı, SSL güvenlik sertifikası ve ana-yedek çip gibi özellikler sunar. Bu paket, web projenizi başlatmak veya geliştirmek için gerekli temel ve gelişmiş özellikleri bir araya getirir. TekÇip'in uzman ekibi, size hızlı ve etkili destek sağlamak için her zaman hazırdır.</p>
                 <div class="in-text">
                     <div class="price">
-                      <h6><a href="#"class="dropan"><i class="bx bxs-info-circle"></i></a> Ön bilgilendirme </h6>
+                      <h6><a href="#"class="dropan"><i class="bx bxs-info-circle"></i></a> Sipariş nasıl verilir ? </h6>
                     </div>
                     <div class="s-btnn">
                         <a href="#">Sipariş Et</a>
@@ -814,7 +826,7 @@
                <br>
                 <div class="in-text">
                     <div class="price">
-                        <h6><a href="#" class="dropan"><i class="bx bxs-info-circle"></i></a> Ön bilgilendirme </h6>
+                        <h6><a href="#" class="dropan"><i class="bx bxs-info-circle"></i></a> Sipariş nasıl verilir ? </h6>
                     </div>
                     <div class="s-btnn">
                         <a href="#">Sipariş Et</a>
@@ -836,7 +848,7 @@
                 <br>
                 <div class="in-text">
                     <div class="price">
-                        <h6><a href="#" class="dropan"><i class="bx bxs-info-circle"></i></a> Ön bilgilendirme </h6>
+                        <h6><a href="#" class="dropan"><i class="bx bxs-info-circle"></i></a> Sipariş nasıl verilir ? </h6>
                     </div>
                     <div class="s-btnn">
                         <a href="#">Sipariş Et</a>
@@ -857,7 +869,7 @@
                     MaksimumÇip, çevrimiçi varlığınızı sınırları zorlayarak en üst seviyeye taşıyan bir pakettir. Özelleştirilebilirlikte sınır tanımaz, güvenlik konusunda öncüdür ve yüksek performanslı sunucularıyla hızlı bir deneyim sunar. Analitik ve optimizasyon araçlarıyla sürekli iyileştirme imkanı sunar. MaksimumÇip ile çevrimiçi varlığınızı güçlendirin, rakiplerinizden öne çıkın ve başarıya ulaşın.</p>
                 <div class="in-text">
                     <div class="price">
-                        <h6><a href="#" class="dropan"><i class="bx bxs-info-circle"></i></a> Ön bilgilendirme </h6>
+                        <h6><a href="#" class="dropan"><i class="bx bxs-info-circle"></i></a> Sipariş nasıl verilir ? </h6>
                     </div>
                     <div class="s-btnn">
                         <a href="#">Sipariş Et </a>
@@ -886,7 +898,6 @@
             <div class="chip1-text"  align="center">
                 <h2> Kişisel </h2>
                 <p>
-
                     <a href="#" class="dropan"><i class="bx bxs-droplet-half"></i></a> Kişisel Bilgiler İçeren Üye Sayfası Tasarımı: Size özel bir web sayfası tasarlanır ve kişisel bilgilerinizi içeren bir üyelik sistemi oluşturulur. <br><br>
                     <a href="#" class="dropan"><i class="bx bxs-droplet-half"></i></a> Kendine Has Domain: Kendi adınıza veya tercih ettiğiniz bir isimle alan adı kaydedilir. <br><br>
                     <a href="#" class="dropan"><i class="bx bxs-droplet-half"></i></a> SSL Güvenlik Sertifikası: Web sitenizdeki trafiğin güvenliğini sağlamak için SSL sertifikası sağlanır. <br><br>
@@ -1160,6 +1171,24 @@
             </div>
          </div>
     </section>
+    <section>
+        <h1>Mail Formu</h1>
+        <form id="mailForm">
+            <label for="country">Ülke:</label>
+            <input type="text" id="country" required><br><br>
+          
+            <label for="phoneNumber">Telefon Numarası:</label>
+            <input type="tel" id="phoneNumber" required><br><br>
+          
+            <label for="package">Paket İsmi:</label>
+            <input type="text" id="package" required><br><br>
+        
+            <label for="message">Mesaj:</label>
+            <textarea id="message" rows="4" cols="50"></textarea><br><br>
+          
+            <input type="submit" value="Sipariş Ver">
+          </form>
+    </section>
     <section class="end">
         <div class="middle-text" align="center">   
          <p>Tüm Hakları TekÇip Şirketi'ne aittir. Tüm hakları saklıdır © 2020-2023.</p>
@@ -1167,6 +1196,7 @@
          <br>
         </div>
      </section>
+
     <!--ScrollTop-->
     <a href="#" class="scroll">
          <i class="bx bx-up-arrow-alt"></i>
@@ -1211,4 +1241,38 @@
     sr.reveal ('.middle-text',{});
     sr.reveal ('.row-btn,.shop-content',{delay:300});
     sr.reveal ('.review, .review-content',{delay:300});
+
+
+    document.getElementById("mailForm").addEventListener("submit", function(event) {
+  event.preventDefault(); // Formun varsayılan davranışını engelle
+
+  var country = document.getElementById("country").value;
+  var phoneNumber = document.getElementById("phoneNumber").value;
+  var packageValue = document.getElementById("package").value;
+  var message = document.getElementById("message").value; // Yeni metin alanından mesajı al
+
+  // E-posta içeriğini oluştur
+  var emailSubject = "Yeni Sipariş İsteği";
+  var emailBody = "Ülke: " + country + "\n" +
+                  "Telefon Numarası: " + phoneNumber + "\n" +
+                  "Paket İsmi: " + packageValue + "\n\n" +
+                  "Mesaj: " + message; // Mesajı da e-posta içeriğine ekle
+
+  var targetEmail = "info@tekçip.com";
+  // Gmail'in "compose" URL'sini oluştur
+  var gmailComposeLink = "https://mail.google.com/mail/?view=cm&fs=1&to=&su=" +
+                         encodeURIComponent(emailSubject) +
+                         "&body=" + encodeURIComponent(emailBody);
+                         
+
+  // Yeni bir pencerede Gmail'in "compose" sayfasını aç
+  var newWindow = window.open(gmailComposeLink, "_blank");
+
+  // Formu temizle
+  document.getElementById("country").value = "";
+  document.getElementById("phoneNumber").value = "";
+  document.getElementById("package").value = "";
+  document.getElementById("message").value = ""; // Metin alanını da temizle
+});
+
 </script>
