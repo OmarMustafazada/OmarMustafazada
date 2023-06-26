@@ -1161,31 +1161,7 @@
             </div>
          </div>
     </section>
-    <section>
-        <h1>Mail Formu</h1>
-        <form id="mailForm">
-            <label for="country">Ülke:</label>
-            <input type="text" id="country" required><br><br>
-          
-            <label for="phoneNumber">Telefon Numarası:</label>
-            <input type="tel" id="phoneNumber" required><br><br>
-          
-            <label for="package">Paket İsmi:</label>
-            <input type="text" id="package" required><br><br>
-        
-            <label for="message">Mesaj:</label>
-            <textarea id="message" rows="4" cols="50"></textarea><br><br>
-          
-            <input type="submit" value="Sipariş Ver">
-          </form>
-    </section>
-    <section class="end">
-        <div class="middle-text" align="center">   
-         <p>Tüm Hakları TekÇip Şirketi'ne aittir. Tüm hakları saklıdır © 2020-2023.</p>
-         <p align="center">Bu site, TekÇip Şirketi tarafından 2020 yılından beri kurulmuş olup tüm hakları korunmaktadır.</p>
-         <br>
-        </div>
-     </section>
+    
 
     <!--ScrollTop-->
     <a href="#" class="scroll">
@@ -1231,38 +1207,5 @@
     sr.reveal ('.middle-text',{});
     sr.reveal ('.row-btn,.shop-content',{delay:300});
     sr.reveal ('.review, .review-content',{delay:300});
-
-
-    document.getElementById("mailForm").addEventListener("submit", function(event) {
-  event.preventDefault(); // Formun varsayılan davranışını engelle
-
-  var country = document.getElementById("country").value;
-  var phoneNumber = document.getElementById("phoneNumber").value;
-  var packageValue = document.getElementById("package").value;
-  var message = document.getElementById("message").value; // Yeni metin alanından mesajı al
-
-  // E-posta içeriğini oluştur
-  var emailSubject = "Yeni Sipariş İsteği";
-  var emailBody = "Ülke: " + country + "\n" +
-                  "Telefon Numarası: " + phoneNumber + "\n" +
-                  "Paket İsmi: " + packageValue + "\n\n" +
-                  "Mesaj: " + message; // Mesajı da e-posta içeriğine ekle
-
-  var targetEmail = "info@tekçip.com";
-  // Gmail'in "compose" URL'sini oluştur
-  var gmailComposeLink = "https://mail.google.com/mail/?view=cm&fs=1&to=&su=" +
-                         encodeURIComponent(emailSubject) +
-                         "&body=" + encodeURIComponent(emailBody);
-                         
-
-  // Yeni bir pencerede Gmail'in "compose" sayfasını aç
-  var newWindow = window.open(gmailComposeLink, "_blank");
-
-  // Formu temizle
-  document.getElementById("country").value = "";
-  document.getElementById("phoneNumber").value = "";
-  document.getElementById("package").value = "";
-  document.getElementById("message").value = ""; // Metin alanını da temizle
-});
 
 </script>
