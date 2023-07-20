@@ -29,6 +29,7 @@
         }
         :root{
              --main-color: #ff9f0d;
+             --third-color: #3db8ff;
              --text-color: #fff;
              --other-color: #212121;
              --second-color: #9e9e9e;
@@ -170,6 +171,27 @@
              color: var(--bg-color);
              box-shadow: #ff9f0d 0px 1px 25px;
         }
+        .btnt{
+          display: inline-block;
+          padding: 15px 35px;
+          background: var(--other-color);
+          color: var(--main-color);
+          font-size: var(--p-font);
+          font-weight: 500;
+          letter-spacing: 1px;
+          border-radius: 3rem;
+          transition: all .50s ease;
+        }
+        .btnt i{
+          vertical-align: middle;
+          margin-left: 9px;
+          font-size: 22px;
+        }
+        .btnt:hover{
+          background: var(--third-color);
+          color: var(--bg-color);
+          box-shadow: var(--third-color) 0px 1px 25px;
+        }
         .btn2{
              display: inline-block;
              margin-left: 30px;
@@ -223,6 +245,7 @@
              grid-template-columns: repeat(2, 1fr);
              align-items: center;
              gap: 4rem;
+             margin-bottom: 350px;
         }
         .about-img img{
              width: 180%;
@@ -297,7 +320,7 @@
              margin-bottom: 3rem;
         }
         .chip2 .chip2-0{
-             background: var(--main-color);
+             background: var(--third-color);
              border-radius: 100px;
              min-width: 500px;
              min-height: 1570px;
@@ -365,7 +388,7 @@
              margin-bottom: 3rem;
         }
         .chip4 .chip4-0{
-             background: var(--main-color);
+             background: var(--third-color);
              border-radius: 100px;
              min-width: 500px;
              min-height: 1570px;
@@ -394,12 +417,16 @@
              margin-bottom: -100px;
              color: var(--main-color);
         }
+        .shop{
+          margin-top: 300px;
+        }
         .shop-content{
              display: grid;
              grid-template-columns: repeat(auto-fit, minmax(300px,auto));
              gap: 3rem;
              align-items: center;
              margin-top: 4rem;
+             
         }
         .row{
              position: relative;
@@ -408,7 +435,7 @@
              border-radius: 3rem;
              min-width: 300px;
              height: 780px;
-             box-shadow: #ff9f0d 0px 1px 20px;
+             box-shadow: var(--main-color) 0px 1px 20px;
         }
         .row img{
              width: 100%;
@@ -576,7 +603,7 @@
                  height: 85vh;
             }
         }
-        @media (max-width: 480px) {
+        @media (max-width: 450px) {
              #menu-icon {
               display: initial;
             }
@@ -600,6 +627,271 @@
             .navlist.open {
                  top: 100%;
             }
+            .aboutusphoto{
+               background: var(--main-color) ;
+               height: 350px;
+               width: 300px;
+               opacity: 80%;
+               border-radius: 50px;
+            }
+            .aboutcontainer {
+                position: absolute;
+                left: 30%;
+                transform: translate(-50%,-50%);
+                width: 320px;
+                height: 500px;
+                padding: 50px;
+                background-color: black;
+                opacity: 100%;
+                border-radius: 10%;
+               
+          }
+          #slide{
+                width: max-content;
+                margin-top: 50px; 
+          }
+          .shop{
+                margin-top: 150px;
+          }
+          .item{
+               width: 60px;
+               height: 60px;
+               background-position: 50% 50%;
+               display: inline-block;
+               transition: 0.5s;
+               background-size: cover;
+               position: absolute;
+               z-index: 1;
+               top: 95%;
+               transform: translate(0,-50%);
+               border-radius: 50%;
+          }
+          .item:nth-child(1),
+          .item:nth-child(2){
+               left:0;
+               top: 0;
+               transform:translate(0,0);
+               border-radius: 0;
+               width: 100%;
+               height: 100%;
+               box-shadow: none;
+               border-radius: 10%;
+          }
+          .item:nth-child(3){
+               left: 10%;
+          }
+          .item:nth-child(4){
+               left: calc(10% + 20px);
+          }
+          .item:nth-child(5){
+               left: calc(10% + 40px);
+          }
+          .item:nth-child(n+6){
+               left: calc(10% + 60px);
+          }
+          .item .aboutcontent{
+               position: absolute;
+               top: 50%;
+               left: 100px;
+               width: 300px;
+               text-align: left;
+               padding: 0;
+               color: white;
+               transform: translate(0,-50%);
+               display: none;
+          }
+       
+          .item:nth-child(2) .aboutcontent{
+               display: block;
+               z-index: 11111;
+          }
+          .item .name{
+               font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+               font-size: 40px;
+               font-weight: bold;
+               opacity: 0;
+               animation: showcontent 1s ease-in-out 1 forwards;
+          }
+          .item .des{
+               font-size: 20px 0;
+               opacity: 0;
+               animation: showcontent 1s ease-in-out 0.3s 1 forwards;
+          }
+          .item button{
+               padding: 10px 20px;
+               border: none;
+               opacity: 0;
+               animation: showcontent 1s ease-in-out 0.6s 1 forwards;
+          }
+
+          @keyframes showcontent{
+               from{
+                    opacity: 0;
+                    transform: translate(0,100px);
+                    filter: blur(33px);
+               }to{
+                    opacity: 1;
+                    transform: translate(0,0);
+                    filter: blur(0);
+               }    
+          }
+          .aboutbuttons{
+               position: absolute;
+               bottom: -47px;
+               z-index: 222222;
+               left: 120px;
+               text-align: center;
+               width: 100%;
+          }
+          .aboutbuttons button:hover{
+               background-color: var(--third-color);
+               color: white;
+          }
+          .aboutbuttons button{
+             display: inline-block;
+             padding: 10px 15px;
+             background: transparent;
+             color: black;
+             font-size: 14px;
+             font-weight: 500;
+             letter-spacing: 1px;
+             border-radius: 3rem;
+             transition: all .50s ease;  
+             width: 50px;
+        }
+        .aboutbuttons button:hover{
+             background: var(--third-color);
+             color: white;
+        }
+        }
+        @media(min-width: 700px){
+          .aboutusphoto{
+               background-color: var(--third-color);
+               width: 100%;
+               height: 400px;
+               opacity: 70%;
+               
+          }
+          .aboutcontainer {
+                position: absolute;
+                left: 50%;
+                right: 50%;
+                transform: translate(-50%,-50%);
+                width: 1000px;
+                height: 600px;
+                padding: 50px;
+                background-color: black;
+                opacity: 100%;
+                border-radius: 10%;
+          }
+          #slide{
+                width: max-content;
+                margin-top: 50px; 
+          }
+          
+          .item{
+               width: 200px;
+               height: 300px;
+               background-position: 50% 50%;
+               display: inline-block;
+               transition: 0.5s;
+               background-size: cover;
+               position: absolute;
+               z-index: 1;
+               top: 50%;
+               transform: translate(0,-50%);
+               border-radius: 50px;
+          }
+          .item:nth-child(1),
+          .item:nth-child(2){
+               left:0;
+               top: 0;
+               transform:translate(0,0);
+               border-radius: 0;
+               width: 100%;
+               height: 100%;
+               box-shadow: none;
+               border-radius: 10%;
+          }
+          .item:nth-child(3){
+               left: 50%;
+          }
+          .item:nth-child(4){
+               left: calc(50% + 220px);
+          }
+          .item:nth-child(5){
+               left: calc(50% + 440px);
+          }
+          .item:nth-child(n+6){
+               left: calc(50% + 660px);
+          }
+          .item .aboutcontent{
+               position: absolute;
+               top: 50%;
+               left: 100px;
+               width: 300px;
+               text-align: left;
+               padding: 0;
+               color: white;
+               transform: translate(0,-50%);
+               display: none;
+          }
+          .item:nth-child(2) .aboutcontent{
+               display: block;
+               z-index: 11111;
+          }
+          .item .name{
+               font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+               font-size: 40px;
+               font-weight: bold;
+               opacity: 0;
+               animation: showcontent 1s ease-in-out 1 forwards;
+          }
+          .item .des{
+               font-size: 20px 0;
+               opacity: 0;
+               animation: showcontent 1s ease-in-out 0.3s 1 forwards;
+          }
+          .item button{
+               padding: 10px 20px;
+               border: none;
+               opacity: 0;
+               animation: showcontent 1s ease-in-out 0.6s 1 forwards;
+          }
+          @keyframes showcontent{
+               from{
+                    opacity: 0;
+                    transform: translate(0,100px);
+                    filter: blur(33px);
+               }to{
+                    opacity: 1;
+                    transform: translate(0,0);
+                    filter: blur(0);
+               }    
+          }
+          .aboutbuttons{
+               position: absolute;
+               bottom: 30px;
+               z-index: 222222;
+               text-align: center;
+               width: 100%;
+          }
+          .aboutbuttons button:hover{
+               background-color: var(--third-color);
+               color: white;
+          }
+          .aboutbuttons button{
+             display: inline-block;
+             padding: 10px 15px;
+             background: transparent;
+             color: black;
+             font-size: 14px;
+             font-weight: 500;
+             letter-spacing: 1px;
+             border-radius: 3rem;
+             transition: all .50s ease;  
+             width: 60px;
+          }
         }
         @media(max-width: 1045px){
             :root{
@@ -669,54 +961,54 @@
                  gap: 0.1rem;
             }
             .shop{
-                 min-width: 320px;
+                 min-width: 350px;
             }
             .row{
-                 min-width: 320px;
+                 min-width: 350px;
             }
             .about-img img {
-                 min-width: 320px;
+                 min-width: 340px;
             }
             .chip1 .chip1-0{
                  background: var(--main-color);
                  border-radius: 100px;
-                 min-width: 320px;
+                 min-width: 350px;
                  align-items: center;
             }
             .chip1 .chip1-1{
                  background: var(--other-color);
                  border-radius: 100px;
-                 min-width: 320px;
+                 min-width: 350px;
             }
             .chip2 .chip2-0{
-                 background: var(--main-color);
+                 background: var(--third-color);
                  border-radius: 100px;
-                 min-width: 320px;
+                 min-width: 350px;
             }
             .chip2 .chip2-1{
                  background: var(--other-color);
                  border-radius: 100px;
-                 min-width: 320px;
+                 min-width: 350px;
             }
             .chip3 .chip3-0{
                  background: var(--main-color);
                  border-radius: 100px;
-                 min-width: 320px;
+                 min-width: 350px;
             }
             .chip3 .chip3-1{
                  background: var(--other-color);
                  border-radius: 100px;
-                 min-width: 320px;
+                 min-width: 350px;
             }
             .chip4 .chip4-0{
-                 background: var(--main-color);
+                 background: var(--third-color);
                  border-radius: 100px;
-                 min-width: 320px;
+                 min-width: 350px;
             }
             .chip4 .chip4-1{
                  background: var(--other-color);
                  border-radius: 100px;
-                 min-width: 320px;
+                 min-width: 350px;
             }
             .container{
                  padding: 30px 4% 50px;
@@ -725,30 +1017,204 @@
                  padding: 35px 35px 35px 35px;
                  background: var(--other-color);
                  border-radius: 7rem;
-                 min-width: 320px;
+                 min-width: 350px;
            }
            .review-content .box{
-                 min-width: 320px;
+                 min-width: 350px;
            }
            .review .middle-text{
-                 min-width: 320px;
+                 min-width: 350px;
            }
+        }
+          .order {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;  
+                margin-top: 130px;
+                margin-bottom: 130px;
+          }
+          .ordercontainer {
+                background: linear-gradient(#3db8ff, #23a2f6) ;
+                border-radius: 60px 120px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 30px;
+                width: 600px;
+                box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+
+                
+          }
+          .ordercontainer h2 {
+                text-align: center;
+                color: var(--primary-color);
+                margin-bottom: 20px;
+                font-size: 32px;
+                line-height: 42px;
+          }
+          .ordercontainer form {
+                width: 100%;
+          }
+          .ordercontainer label {
+                display: block;
+                font-weight: bold;
+                margin-bottom: 10px;
+                color: var(--primary-color);
+                font-size: 16px;
+          }
+          .ordercontainer input[type="text"],
+          .ordercontainer select,
+          .ordercontainer textarea {
+                width: 100%;
+                padding: 10px;
+                border-radius: 20px 15px;
+                border: 1px solid var(--secondary-color);
+                margin-bottom: 10px;
+                font-size: 14px;
+                transition: border-color 0.3s ease;
+          }
+          .ordercontainer input[type="text"]:focus,
+          .ordercontainer select:focus,
+          .ordercontainer textarea:focus {
+                outline: none;
+                border-color: var(--primary-color);
+          
+          }
+          .ordercontainer .phone-input {
+                display: flex;
+                align-items: center;
+          }
+          .ordercontainer .phone-input select {
+                flex: 0.3;
+                margin-right: 10px;
+          }  
+          .ordercontainer input[type="submit"] {
+                width: 60%;
+                padding: 10px;
+                background-color: var(--primary-color);
+                color: #fff;
+                border: none;
+                border-radius: 20px;
+                font-size: 16px;
+                cursor: pointer;
+                margin-left: 110px;
+                margin-right: 60px;
+                transition: background-color 0.3s ease;
+          }
+          .ordercontainer input[type="submit"]:hover {
+                background-color: #1976D2;
+          }
+          @media only screen and (max-width: 600px) {
+                .order{
+                     margin-top: 150px;
+                     margin-bottom: 150px;
+                     
+               }
+               .ordercontainer {
+                     width: 320px;
+                     margin-left: 40px;
+                     padding: 25px;
+                     background: linear-gradient(#3db8ff, #23a2f6) ;
+                     border-radius: 60px 90px;
+                     align-items: center;
+               }
+               .ordercontainer h2 {
+                     font-size: 20px;
+               } 
+               .ordercontainer input[type="submit"] {
+                     font-size: 16px;
+                     background-color: var(--third-color);
+                    
+               }
+               .ordercontainer input[type="submit"]:hover{
+                    background-color: var(--main-color);
+                    opacity: 80%;
+               }
+          }
+          .footer {
+                background-color: var(--third-color);
+                text-align: center;
+                padding: 10px;
+                position: fixed;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                opacity: 70%;
+          }
+          .footer a {
+                color: #333;
+                text-decoration: none;
+          }
+          .footer a:hover {
+                text-decoration: underline;
+          }
+          .footcontainer {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        .footcontainer h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            opacity: 70%;
+        }
+        .image-section {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .image-section img {
+            max-width: 100px;
+            margin: 10px;
+            opacity: 70%;
+        }
+        @media (max-width: 450px) {
+          .footer {
+                background-color: var(--third-color);
+                text-align: center;
+                padding: 10px;
+                position: fixed;
+                left: 0;
+                bottom: 0;
+                width: 379px;
+                opacity: 70%;
+          }
+          .image-section  {
+                width: 300px;
+                margin: 10px;
+                opacity: 70%;
+                justify-content: center;
+          }
+          .footcontainer {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        .footcontainer h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            opacity: 70%;
+        }
         }
     </style>
 </head>
 <body>
     <header>
-         <a href="#" class="logo"><img src="icon.png" alt=""></a>
+         <a class="logo"><img src="icon.png" alt=""></a>
          <ul class="navlist">
              <li><a href="#home" class="active">Ana Sayfa</a></li>
              <li><a href="#about">Hakkımızda</a></li>
              <li><a href="#shop">Hizmetlerimiz</a></li>
+             <li><a href="#order">Sipariş</a></li>
              <li><a href="#review"> Yeni Geri Dönüşler</a></li>
              
          </ul>
          <div class="nav-icons">
-              <a href="#"><i class="bx bx-search"></i></a>
-              <a href="#"><i class="bx bx-cart"></i></a>
+              <a href="#shop"><i class="bx bx-search"></i></a>
+              <a href="#order"><i class="bx bx-cart"></i></a>
               <div class="bx bx-menu" id="menu-icon"></div>
          </div>
     </header>
@@ -789,8 +1255,44 @@
               <p>TekÇip Teknoloji şirketi olarak, müşterilerimize özel çipler üretme ve kodlama konusunda uzmanız. İhtiyaçlarınıza özel tasarlanmış çipler ile size özgü çözümler sunuyoruz. Türkiye'deki sayılı şirketlerden biri olarak, teknoloji sektöründe öncü bir konumdayız. <br>
                 Ekibimiz, müşteri memnuniyetini en üst düzeyde tutmak için özveriyle çalışmaktadır. Tecrübeli ve uzman kadromuz, hızlı ve kaliteli hizmet sunarak projelerinizi zamanında ve istediğiniz standartlarda tamamlar. Sahip olduğumuz deneyim ve uzmanlık, çiplerin üretim sürecini optimize etmemizi ve en yüksek kalitede ürünler sunmamızı sağlar. Ekibimiz, teknoloji alanındaki gelişmeleri yakından takip eder ve yenilikçi çözümler üretme konusunda yeteneklidir. Size özel çipler üretme ve kodlama konusundaki başarılarımızı, deneyimli ekibimize borçluyuz <br>
                 TekÇip Teknoloji olarak, hızlı ve kaliteli hizmet sunma konusunda kendimize güveniyoruz. Müşterilerimizin zaman değerini önemsiyor ve projelerini belirlenen süre içinde tamamlamak için gereken çabayı gösteriyoruz. Her aşamada titizlikle çalışarak, müşterilerimize güvenilir ve istikrarlı bir iş ortağı olmayı sürdürüyoruz. </p> <br>
-              <a href="#shop" class="btn">Keşfet <i class="bx bx-right-arrow"></i></a>
+              <a href="#aboutcontainer" class="btn">Keşfet <i class="bx bx-right-arrow"></i></a>
         </div>
+    </section>
+    <!--aboutusphoto-->
+    <section class="aboutusphoto" id="aboutusphoto">
+           <div class="aboutcontainer" id="aboutcontainer">
+                <div id="slide">
+                     <div class="item" style="background-image: url(tekcipanimation2.gif);">
+                         <div class="aboutcontent">
+                              <div align="center" class="name">NFC ile Temassız Navigasyon</div>
+                              <div align="center" class="des">RFID teknolojisi ile çalışan NFC çipleri sayesinde temassız navigasyon hizmetleri sunuyoruz. NFC'nin kullanımı, sürücülere güvenli, hızlı ve etkileşimli bir yol tarifi deneyimi sağlıyor. Geleceğin navigasyon ihtiyaçlarına yönelik çözümlerimizle daha akıllı ve kolay bir sürüş deneyimi sunuyoruz.</div>
+                         </div>
+                    </div>
+                    <div class="item" style="background-image: url(tekcipanimation3.gif);">
+                         <div class="aboutcontent">
+                              <div align="center" class="name">NFC ile Temassız Araç Kontrolu</div>
+                              <div align="center" class="des">NFC ile Temassız Araç Kontrolü ile sürücüler, araçlarını ve motorlarını güvenli bir şekilde çalıştırabilir ve kontrol edebilirler. NFC teknolojisi sayesinde anahtar kullanmadan, sadece cihazlarını NFC çipi ile temas ettirerek otomobillerini çalıştırabilir ve gerekli kontrolleri yapabilirler. Bu güvenli ve kolay kullanım, geleceğin otomobil deneyimini daha akıllı ve pratik hale getiriyor</div>
+                         </div>
+                    </div>
+                    <div class="item" style="background-image: url(tekçipanimation1.gif);">
+                         <div class="aboutcontent">
+                              <div align="center" class="name">Moda ve İşlevsellik: NFC ile Temassız Bileklikler</div>
+                              <div align="center" class="des"> NFC teknolojisiyle çalışan temassız bileklikler, kullanıcıların insanlar içinde görünür olmasını sağlar. Şık ve zarif tasarımı sayesinde bilekte şıklıkla kullanılabilen bu cihazlar, veri alışverişi yapabilme yeteneği sayesinde kullanıcılara işlevsel bir deneyim sunar. </div>
+                         </div>
+                    </div>
+                    <div class="item" style="background-image: url(tekcipanimation4.gif);">
+                         <div class="aboutcontent">
+                              <div align="center" class="name">NFC Teknolojili Minimalist Yüzükler</div>
+                              <div align="center" class="des">
+                                   NFC teknolojisine sahip yüzükler, kompakt ve minimal tasarımları sayesinde şıklığı ve işlevselliği bir arada sunar. Bu yüzükler, temas gerektirmeden veri alışverişi yapma yeteneğiyle kullanıcılara kolaylık sağlar ve günlük yaşamı pratikleştirir. NFC yüzükler, kullanıcılara modern bir tarz ve akıllı bir yaşam tarzı sunarak teknolojiyi şık bir şekilde taşımalarını ve etkileyici bir görünüm elde etmelerini sağlar.</div>
+                         </div>
+                    </div>
+                </div>
+                <div class="aboutbuttons" >
+                     <button id="prev"><i class="bx bxs-chevron-left-circle"></i></button>
+                     <button id="next"><i class="bx bxs-chevron-right-circle"></i></button>
+                </div>
+           </div>
     </section>
     <!--OurShop-->
     <section class="shop" id="shop">
@@ -805,10 +1307,10 @@
                 <p align="center">"ÇipBaşlangıç" paketi, kişisel bilgiler içeren üye sayfası tasarımı, kendine has alan adı, SSL güvenlik sertifikası ve ana-yedek çip gibi özellikler sunar. Bu paket, web projenizi başlatmak veya geliştirmek için gerekli temel ve gelişmiş özellikleri bir araya getirir. TekÇip'in uzman ekibi, size hızlı ve etkili destek sağlamak için her zaman hazırdır.</p>
                 <div class="in-text">
                     <div class="price">
-                      <h6><a href="#"class="dropan"><i class="bx bxs-info-circle"></i></a> Sipariş nasıl verilir ? </h6>
+                      <h6><a href="#order"class="dropan"><i class="bx bxs-info-circle"></i></a> Sipariş nasıl verilir ? </h6>
                     </div>
                     <div class="s-btnn">
-                        <a href="#">Sipariş Et</a>
+                        <a href="#order">Sipariş Et</a>
                     </div>
                 </div>
                 <br>
@@ -816,7 +1318,7 @@
                     <a href="#chip1">Daha Fazla Bilgi Al </a>
                 </div>
                 <div class="top-icon">
-                    <a href="#"><i class="bx bx-heart"></i></a>
+                    <a href="#order"><i class="bx bx-heart"></i></a>
                 </div>
             </div>
             <div class="row">
@@ -826,10 +1328,10 @@
                <br>
                 <div class="in-text">
                     <div class="price">
-                        <h6><a href="#" class="dropan"><i class="bx bxs-info-circle"></i></a> Sipariş nasıl verilir ? </h6>
+                        <h6><a href="#order" class="dropan"><i class="bx bxs-info-circle"></i></a> Sipariş nasıl verilir ? </h6>
                     </div>
                     <div class="s-btnn">
-                        <a href="#">Sipariş Et</a>
+                        <a href="#order">Sipariş Et</a>
                     </div>
                 </div>
                 <br>
@@ -837,7 +1339,7 @@
                     <a href="#chip2">Daha Fazla Bilgi Al</a>
                 </div>
                 <div class="top-icon">
-                    <a href="#"><i class="bx bx-heart"></i></a>
+                    <a href="#order"><i class="bx bx-heart"></i></a>
                 </div>
             </div>
             <div class="row">
@@ -848,10 +1350,10 @@
                 <br>
                 <div class="in-text">
                     <div class="price">
-                        <h6><a href="#" class="dropan"><i class="bx bxs-info-circle"></i></a> Sipariş nasıl verilir ? </h6>
+                        <h6><a href="#order" class="dropan"><i class="bx bxs-info-circle"></i></a> Sipariş nasıl verilir ? </h6>
                     </div>
                     <div class="s-btnn">
-                        <a href="#">Sipariş Et</a>
+                        <a href="#order">Sipariş Et</a>
                     </div>
                 </div>
                 <br>
@@ -859,7 +1361,7 @@
                     <a href="#chip3">Daha Fazla Bilgi Al</a>
                 </div>
                 <div class="top-icon">
-                    <a href="#"><i class="bx bx-heart"></i></a>
+                    <a href="#order"><i class="bx bx-heart"></i></a>
                 </div>
             </div>
             <div class="row">
@@ -869,14 +1371,14 @@
                     MaksimumÇip, çevrimiçi varlığınızı sınırları zorlayarak en üst seviyeye taşıyan bir pakettir. Özelleştirilebilirlikte sınır tanımaz, güvenlik konusunda öncüdür ve yüksek performanslı sunucularıyla hızlı bir deneyim sunar. Analitik ve optimizasyon araçlarıyla sürekli iyileştirme imkanı sunar. MaksimumÇip ile çevrimiçi varlığınızı güçlendirin, rakiplerinizden öne çıkın ve başarıya ulaşın.</p>
                 <div class="in-text">
                     <div class="price">
-                        <h6><a href="#" class="dropan"><i class="bx bxs-info-circle"></i></a> Sipariş nasıl verilir ? </h6>
+                        <h6><a href="#order" class="dropan"><i class="bx bxs-info-circle"></i></a> Sipariş nasıl verilir ? </h6>
                     </div>
                     <div class="s-btnn">
-                        <a href="#">Sipariş Et </a>
+                        <a href="#order">Sipariş Et </a>
                     </div>
                 </div>
                 <div class="top-icon">
-                    <a href="#"><i class="bx bx-heart"></i></a>
+                    <a href="#order"><i class="bx bx-heart"></i></a>
                 </div>
                 <br>
                 <div class="s-btnn">
@@ -906,7 +1408,7 @@
                     <a href="#" class="dropan"><i class="bx bxs-droplet-half"></i></a> Geliştirilmiş Kullanıcı Arayüzü: Yenilenen arayüz, daha kullanıcı dostu ve kolay kullanılabilir bir deneyim sunar. <br><br>
                     <a href="#" class="dropan"><i class="bx bxs-droplet-half"></i></a> Artırılmış Güvenlik Özellikleri: Yeni güvenlik önlemleri ve algoritmaları, web sitenizin güvenliğini daha da artırır. <br><br>
                     <a href="#" class="dropan"><i class="bx bxs-droplet-half"></i></a> Mobil Uyumluluk: Web siteniz, farklı mobil cihazlarda sorunsuz bir şekilde görüntülenebilir ve kullanılabilir. <br><br>
-                <a align="center" href="#" class="btn">Sipariş Et <i class="bx bx-right-arrow"></i></a>
+                <a align="center" href="#order" class="btnt">Sipariş Et <i class="bx bx-right-arrow"></i></a>
             </div>
         </section> 
         <section class="chip1-1">
@@ -924,7 +1426,7 @@
                     
                     <h3>Başlangıç Düzeyindeki Kullanıcılar:</h3>
                     Web dünyasında yeni olan veya sınırlı teknik bilgiye sahip olan kişiler için "ÇipBaşlangıç" paketi ideal bir seçenektir. Adım adım rehberlik ve kullanıcı dostu arayüzü sayesinde web sitesi oluşturma sürecini basitleştirir. Bu paket, kullanıcıların web varlığını hızlı ve kolay bir şekilde başlatmasına yardımcı olur.</p> <br>
-                <a href="#" class="btn"> Sipariş Et <i class="bx bx-right-arrow"></i></a>
+                <a href="#order" class="btn"> Sipariş Et <i class="bx bx-right-arrow"></i></a>
             </div>
         </section>
     </section>
@@ -947,7 +1449,7 @@
                     <a href="#" class="dropan"><i class="bx bxs-droplet-half"></i></a> Şahıs Özgeçmişi: İş deneyimlerinizi, eğitim bilgilerinizi ve ilgi alanlarınızı içeren ayrıntılı bir şahıs özgeçmişi bölümüne sahip olursunuz. Böylece potansiyel işverenler veya iş bağlantıları sizi daha iyi tanıyabilir ve iletişim kurabilir. <br><br>
 
                     <a href="#" class="dropan"><i class="bx bxs-droplet-half"></i></a> Kapsamlı Bilgi Paylaşımı: Şu anda ilgilendiğiniz iş hakkında detaylı bilgileri paylaşabilirsiniz. Bu, potansiyel işverenlerin veya iş ortaklarının sizinle ilgili daha fazla bilgi edinmesine yardımcı olur. <br><br>
-                <a align="center" href="#" class="btn">Sipariş Et <i class="bx bx-right-arrow"></i></a>
+                <a align="center" href="#order" class="btn">Sipariş Et <i class="bx bx-right-arrow"></i></a>
             </div>
         </section> 
         <section class="chip2-1">
@@ -965,36 +1467,35 @@
                    
                     <h3>Başlangıç Düzeyindeki Kullanıcılar:</h3>
                     Web dünyasında yeni olan veya sınırlı teknik bilgiye sahip olan kullanıcılar için "ÇipBaşlangıç" paketi idealdir. Adım adım rehberlik ve kullanıcı dostu arayüzü sayesinde web sitesi oluşturma süreci basitleştirilir. Bu kullanıcılar, hızlı bir şekilde çevrimiçi varlık oluşturabilir ve web sitelerini yönetme konusunda güven kazanabilirler. <br><br></p>
-                <a href="#" class="btn"> Sipariş Et <i class="bx bx-right-arrow"></i></a>
+                <a href="#order" class="btn"> Sipariş Et <i class="bx bx-right-arrow"></i></a>
             </div>
         </section>
     </section>
       <!--chip3-->
-      <section class="chip2" id="chip2">
-        <section class="chip2-0">
-            <div class="chip2-img">
+      <section class="chip3" id="chip3">
+        <section class="chip3-0">
+            <div class="chip3-img">
                 <img src="chihpprofosyonelimg.png"  >
                 <h2 align="center">ProfesyonelÇip</h2>
             </div>
-            <div class="chip2-text"  align="center">
+            <div class="chip3-text"  align="center">
                 <h2> Kişisel </h2>
                 <p>
-
                     <a href="#" class="dropan"><i class="bx bxs-droplet-half"></i></a> Kişisel Bilgiler İçeren Üye Sayfası Tasarımı: Size özel bir web sayfası tasarlanır ve kişisel bilgilerinizi içeren bir üyelik sistemi oluşturulur. <br><br>
                     <a href="#" class="dropan"><i class="bx bxs-droplet-half"></i></a> Kendine Has Domain: Kendi adınıza veya tercih ettiğiniz bir isimle alan adı kaydedilir. <br><br>
                     <a href="#" class="dropan"><i class="bx bxs-droplet-half"></i></a> SSL Güvenlik Sertifikası: Web sitenizdeki trafiğin güvenliğini sağlamak için SSL sertifikası sağlanır. <br><br>
                     <a href="#" class="dropan"><i class="bx bxs-droplet-half"></i></a> Kapsamlı Sayfa: Paket içerisinde yer alan özel bir sayfa, kurumunuzun geçmişi hakkında ayrıntılı bilgi sunar. Bu sayfada kurumunuzun başarıları, projeleri ve deneyimleri kapsamlı bir şekilde anlatılır. Potansiyel müşteriler ve iş ortakları, kurumunuz hakkında daha fazla bilgi edinmek için bu sayfayı kullanabilir. <br><br>
                     <a href="#" class="dropan"><i class="bx bxs-droplet-half"></i></a>İki Premium Çip: "ProfesyonelÇip" paketi, kurumunuzun web sitesi için iki premium çip sunar. Birincisi, tanıtım amacıyla kullanılır ve kurumunuzun kendisini etkileyici bir şekilde tanıtmasına olanak sağlar. İkincisi, veri aktarımı için kullanılır ve kurumunuzun büyük miktarda veriyi güvenli bir şekilde depolamasına yardımcı olur. <br><br>
                     <a href="#" class="dropan"><i class="bx bxs-droplet-half"></i></a>Tam Set Şansı: Bu paket, size birbirini tamamlayan iki premium çipin yanı sıra komple bir set sunar. Bu set, kurumunuzun tüm bilgilerini ve projelerini depolama ve güncelleme imkanı sağlar. Böylece kurumunuz, çevrimiçi varlığınızı etkili bir şekilde yönetebilir ve gelecekteki büyüme için sağlam bir temel oluşturabilir. <br><br>
-                    <a align="center" href="#" class="btn">Sipariş Et <i class="bx bx-right-arrow"></i></a>
+                    <a align="center" href="#order" class="btnt">Sipariş Et <i class="bx bx-right-arrow"></i></a>
             </div>
         </section> 
-        <section class="chip2-1">
-            <div class="chip2-img">
+        <section class="chip3-1">
+            <div class="chip3-img">
                 <img src="chipprofesyonel2img.png" >
                 <h2 align="center">ProfesyonelÇip</h2>
             </div>
-            <div class="chip2-text" align="center">
+            <div class="chip3-text" align="center">
                 <h2> Kimler için daha uygundur </h2>
                 <p> <h3>Kurumsal Şirketler:</h3>
                      Büyük ölçekli şirketler, "ProfesyonelÇip" paketini kullanarak çevrimiçi varlıklarını güçlendirebilir. Bu paket, şirketin geçmişi, projeleri, başarıları ve hizmetleri gibi bilgileri kapsamlı bir şekilde sunarak potansiyel müşterilere etkileyici bir izlenim bırakır. <br><br>
@@ -1007,21 +1508,20 @@
                     
                     <h3>Yaratıcı Endüstri:</h3> 
                     Eğitim Kurumları: Üniversiteler, kolejler, eğitim kurumları, "ProfesyonelÇip" paketini kullanarak kurumlarının tanıtımını yapabilir ve öğrencilere detaylı bilgiler sunabilirler. Bu paket, kurumun eğitim programları, akademik başarıları ve öğrenci kaynakları gibi bilgileri paylaşma imkanı sağlar. <br></p>
-                <a href="#" class="btn"> Sipariş Et <i class="bx bx-right-arrow"></i></a>
+                <a href="#order" class="btn"> Sipariş Et <i class="bx bx-right-arrow"></i></a>
             </div>
         </section>
     </section>
         <!--chip4-->
-        <section class="chip3" id="chip3">
-            <section class="chip3-0">
-                <div class="chip3-img">
+        <section class="chip4" id="chip4">
+            <section class="chip4-0">
+                <div class="chip4-img">
                     <img src="chipmaksimumimg.png"  >
                     <h2 align="center">MaksimumÇip</h2>
                 </div>
-                <div class="chip3-text"  align="center">
+                <div class="chip4-text"  align="center">
                     <h2> Kişisel </h2>
                     <p>
-    
                         <a href="#" class="dropan"><i class="bx bxs-droplet-half"></i></a> Kişisel Bilgiler İçeren Üye Sayfası Tasarımı: Size özel bir web sayfası tasarlanır ve kişisel bilgilerinizi içeren bir üyelik sistemi oluşturulur. <br><br>
                         <a href="#" class="dropan"><i class="bx bxs-droplet-half"></i></a> Kendine Has Domain: Kendi adınıza veya tercih ettiğiniz bir isimle alan adı kaydedilir. <br><br>
                         <a href="#" class="dropan"><i class="bx bxs-droplet-half"></i></a> SSL Güvenlik Sertifikası: Web sitenizdeki trafiğin güvenliğini sağlamak için SSL sertifikası sağlanır. <br><br>
@@ -1030,15 +1530,15 @@
                         <a href="#" class="dropan"><i class="bx bxs-droplet-half"></i></a> Tanıtım Amaçlı Premium Çip: İlk premium çip, kurumunuzun kendini etkileyici bir şekilde tanıtmasını sağlar. Misyonunuz, vizyonunuz, başarılarınız ve hizmetleriniz gibi bilgileri vurgulayarak potansiyel müşterilerinize güçlü bir izlenim bırakabilirsiniz. <br><br>
                         <a href="#" class="dropan"><i class="bx bxs-droplet-half"></i></a>Veri Aktarımı İçin Premium Çip: İkinci premium çip, büyük miktarda veriyi güvenli bir şekilde depolamanızı sağlar. Müşteri bilgileri, işlemler, dosyalar ve diğer önemli verileri saklayabilir ve güvenli bir şekilde erişebilirsiniz. <br><br>
                         <a href="#" class="dropan"><i class="bx bxs-droplet-half"></i></a>İki Kez Yılda Çip Değişimi: "ProfesyonelÇip" paketi, size yılda iki kez çip değiştirme imkanı sunar. Bu özellik sayesinde, olası çip kaybı, hasar veya bozulma durumlarında çipleri güncelleyebilir ve web sitenizin sorunsuz bir şekilde çalışmasını sağlayabilirsiniz. <br><br>
-                        <a align="center" href="#" class="btn">Sipariş Et <i class="bx bx-right-arrow"></i></a>
+                        <a align="center" href="#order" class="btn">Sipariş Et <i class="bx bx-right-arrow"></i></a>
                 </div>
             </section> 
-            <section class="chip3-1">
-                <div class="chip3-img">
+            <section class="chip4-1">
+                <div class="chip4-img">
                     <img src="chipmaksimum2img.png" >
                     <h2 align="center">MaksimumÇip</h2>
                 </div>
-                <div class="chip3-text" align="center">
+                <div class="chip4-text" align="center">
                     <h2> Kimler için daha uygundur </h2>
                     <p> <h3>Kurumsal Şirketler:</h3>
                         Büyük ölçekli şirketler, "ProfesyonelÇip" paketini kullanarak çevrimiçi varlıklarını güçlendirebilir. Bu paket, şirketin geçmişi, projeleri, başarıları ve hizmetleri gibi bilgileri kapsamlı bir şekilde sunarak potansiyel müşterilere etkileyici bir izlenim bırakır. <br><br>
@@ -1060,10 +1560,74 @@
                         
                         <h3>Yaratıcı Endüstri:</h3> 
                         Eğitim Kurumları: Üniversiteler, kolejler, eğitim kurumları, "ProfesyonelÇip" paketini kullanarak kurumlarının tanıtımını yapabilir ve öğrencilere detaylı bilgiler sunabilirler. Bu paket, kurumun eğitim programları, akademik başarıları ve öğrenci kaynakları gibi bilgileri paylaşma imkanı sağlar. <br></p>
-                    <a href="#" class="btn"> Sipariş Et <i class="bx bx-right-arrow"></i></a>
+                    <a href="#order" class="btn"> Sipariş Et <i class="bx bx-right-arrow"></i></a>
                 </div>
             </section>
         </section>
+     <!--Order-->
+     <section class="order" id="order">
+          <div>
+               <div class="ordercontainer">
+                    <h2> Sipariş Formu </h2>
+                      <h5 align="center">
+                         Şirket olarak, size en iyi hizmeti sunabilmek ve ihtiyaçlarınıza özel çözümler sağlayabilmek için lütfen aşağıdaki sipariş formunu doldurunuz. <br>
+                         Talep ettiğiniz ürünleri ve iletişim bilgilerinizi bize ileterek ekibimiz en kısa sürede sizinle iletişime geçecektir.</h5><br>
+                      <form action="https://mail.google.com/mailto:mail@gmail.com" method="post">
+
+                      <label for="name">İsim:</label>
+                      <input type="text" id="name" name="name" required> <br>
+                
+                      <label for="surname">Soyisim:</label>
+                      <input type="text" id="surname" name="surname" required> <br>
+
+                      <label for="workname">Çalıştığınız Kurum ismi:</label>
+                      <input type="text" id="workname" name="workname" required> <br>
+
+                      <label for="worknamecode">Kullandığınız Aktif Ana Dil:</label>
+                      <select name="worknamecode" id="worknamecode" required>
+                        <option value="">Aktif Kullandığınız Ana Dili Seçiniz</option>
+                        <option value="Türk dili">Türk dili</option>
+                        <option value="Rus dili">Rus dili</option>
+                        <option value="Azerbaycan dili">Azerbaycan dili</option>
+                      </select>
+
+                      <label for="country">Bulunduğunuz Ülke:</label>
+                      <select id="country" name="country" required> 
+                        <option value="">Bulunduğunuz Ülkeyi Seçiniz</option>
+                        <option value="Türkiye">Türkiye</option>
+                        <option value="Rusya">Rusya</option>
+                        <option value="Azerbaycan">Azerbaycan</option>
+                      </select> <br>
+                
+                      <label for="phone">Telefon Numarası:</label>
+                      <div>
+                        <select id="country-code" name="country-code" required>
+                          <option value="">Yerel Telefon Kodunuzu Seçiniz</option>
+                          <option value="+90">Türkiye (+90)</option>
+                          <option value="+7">Rusya (+7)</option>
+                          <option value="+994">Azerbaycan (+994)</option>
+                        </select>
+                        <input type="text" id="phone" name="phone" required>
+                      </div>  <br>
+                      
+                
+                      <label for="package">Paket İsmi:</label>
+                      <select id="package" name="package" required>
+                        <option value="">Paket Seçiniz</option>
+                        <option value="ÇipBaşlangıç">ÇipBaşlangıç</option>
+                        <option value="YenilikçiÇip">YenilikçiÇip</option>
+                        <option value="ProfesyonelÇip">ProfesyonelÇip</option>
+                        <option value="MaksimumÇip">MaksimumÇip</option>
+                      </select><br>
+                
+                      <label for="message">İlave Mesaj:</label>
+                      <textarea id="message" name="message"></textarea>
+                       <br>
+                      <input type="submit" value="Gönder">
+                    </form>
+                  </div>
+          </div>
+     </section>
     <!--Reviews-->
     <section class="review" id="review">
          <div class="middle-text" align="center">
@@ -1170,9 +1734,18 @@
                 </div>
             </div>
          </div>
+         <div class="footcontainer">
+          <div class="image-section">
+              <img src="iso.png" alt="Sertifika 1">
+              <img src="soc.png" alt="Sertifika 2">
+              <img src="gdpr.png" alt="Sertifika 3">
+          </div>
+          <div class="footer">
+               &copy; 2022 TekÇip Donanım ve Yazılım Şirketi. Tüm hakları saklıdır.
+              </div>
+          </div>
     </section>
-    
-
+  
     <!--ScrollTop-->
     <a href="#" class="scroll">
          <i class="bx bx-up-arrow-alt"></i>
@@ -1206,6 +1779,7 @@
     sr.reveal ('.container',{delay:400});
     sr.reveal ('.about-img',{});
     sr.reveal ('.about-text',{delay:300});
+    sr.reveal ('.aboutcontainer',{delay:300});
     sr.reveal('.chip1 .chip1-0',{delay:300});
     sr.reveal('.chip1 .chip1-1',{delay:300});
     sr.reveal('.chip2 .chip2-0',{delay:300});
@@ -1217,5 +1791,39 @@
     sr.reveal ('.middle-text',{});
     sr.reveal ('.row-btn,.shop-content',{delay:300});
     sr.reveal ('.review, .review-content',{delay:300});
+    sr.reveal ('.ordercontainer',{delay:300});
+    sr.reveal('.review, .box',{delay:300});
+    sr.reveal('.footcontainer h1',{delay:300});
+    sr.reveal('.footcontainer .image-section',{delay:300});
 
+    document.getElementById('next').onclick = function(){
+       let lists = document.querySelectorAll('.item');
+       document.getElementById('slide').appendChild(lists[0]);
+    }
+    document.getElementById('prev').onclick = function(){
+       let lists = document.querySelectorAll('.item');
+       document.getElementById('slide').prepend(lists[lists.length - 1]);
+    }
+    const form = document.querySelector('form');
+    form.addEventListener('submit', function(event) {
+    event.preventDefault();
+      const name = document.getElementById('name').value;
+      const surname = document.getElementById('surname').value;
+      const workname = document.getElementById('workname').value;
+      const worknamecode = document.getElementById('worknamecode').value;
+      const country = document.getElementById('country').value;
+      const countryCode = document.getElementById('country-code').value;
+      const phone = document.getElementById('phone').value;
+      const package = document.getElementById('package').value;
+      const message = document.getElementById('message').value;
+
+      const subject = 'Sipariş Bilgilendirme Talebi';
+      const emailContent = `İsim: ${name}\nSoyisim: ${surname}\nÇalıştığınız Kurum ismi: ${workname}\nKullandığınız Aktif Dil: ${worknamecode}\nÜlke: ${country}\nTelefon Numarası: ${countryCode} ${phone}\nPaket İsmi: ${package}\nİlave Mesaj: ${message}`;
+      alert("Mail Uygulamanıza yönlendiriliyorsunuz Talebiniz En Kısa Sürede Cevaplandırılacaktır");
+      const mailtoLink = `mailto:info@xn--tekip-0ra.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailContent)}`;
+      window.location.href = mailtoLink; 
+      form.reset();
+
+     });
+     
 </script>
