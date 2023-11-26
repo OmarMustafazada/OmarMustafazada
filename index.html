@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TekÇip</title>
+    <link rel="icon" href="images/icon.png" type="image/x-icon">
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <!-- custom js file link  -->
+    <script src="js/script.js" defer></script>
+</head>
+
+<body> 
+<!-- header section starts  -->
+<header class="header">
+    <div id="menu-btn" class="fas fa-bars"></div>
+    <a data-aos="zoom-in-left" data-aos-delay="150" href="#" class="logo">Tek <i class="fas fa-microchip"></i>Çip</a>
+    <nav class="navbar">
+        <a data-aos="zoom-in-left" data-aos-delay="300" href="#home">Ana Sayfa</a>
+        <a data-aos="zoom-in-left" data-aos-delay="450" href="#about">Hakkımızda</a>
+        <a data-aos="zoom-in-left" data-aos-delay="600" href="#destination">Özellikler</a>
+        <a data-aos="zoom-in-left" data-aos-delay="750" href="#services">Hizmetlerimiz</a>
+        <a data-aos="zoom-in-left" data-aos-delay="900" href="#gallery">Galeri</a>
+        <a data-aos="zoom-in-left" data-aos-delay="1150" href="#blogs">Blog</a>
+    </nav>
+    <a data-aos="zoom-in-left" data-aos-delay="1300" href="#gallery" class="btn">Keşfet</a>
+</header>
+<!-- header section ends -->
+
+<!-- home section starts  -->
+<section class="home" id="home">
+    <div class="content">
+        <span data-aos="fade-up" data-aos-delay="150">Tek Çip</span>
+        <h3 data-aos="fade-up" data-aos-delay="300">Teknolojiyle Geleceği Şekillendiriyor
+            İnovasyonla Sınırları Aşıyoruz</h3>
+        <p data-aos="fade-up" data-aos-delay="450">
+            TekÇip Teknoloji şirketi olarak, müşterilerimizin özel ihtiyaçlarına yönelik çip üretimi ve kodlama konusunda uzmanlaşmış bir firmayız. Özel tasarlanmış çiplerimizle size özel çözümler sunuyoruz.</p>
+        <a data-aos="fade-up" data-aos-delay="600" href="#about" class="btn">Bilgi Al</a>
+    </div>
+</section>
+<!-- home section ends -->
+
+<!-- booking form section starts  -->
+<section class="book-form" id="book-form">
+    <form action="">
+        <div data-aos="zoom-in" data-aos-delay="150" class="inputBox">
+            <span>İsminiz ve Soyisminiz nedir, lütfen?</span>
+            <input type="text" id="name" name="name" placeholder="İsim Soyisim" value="">
+        </div>
+        <div data-aos="zoom-in" data-aos-delay="300" class="inputBox">
+             <span>Telefon Numaranız?</span>
+             <select name="telephonecode" id="telephonecode">
+                  <option value="">Ülke Kodu </option>
+                  <option value="+90">Türkiye</option>
+                  <option value="+7">Rusya</option>
+                  <option value="+994">Azerbaycan</option>
+             </select>
+             <input type="tel" id="telephone" name="telephone" placeholder="Telefon Numaranız">
+             <span></span>
+        </div>
+        <div data-aos="zoom-in" data-aos-delay="150" class="inputBox">
+            <span>Hizmet Almak İstediğiniz Sektör, lütfen?</span>
+            <select name="hizmet" id="hizmet">
+                <option value="">Hizmet Türü</option>
+                <option value="Kafe ve Restoran">Kafe ve Restoran</option>
+                <option value="Sağlık Sektörü">Sağlık Sektörü</option>
+                <option value="Güzellik">Güzellik</option>
+                <option value="Öğrenci Yurdu Yönetimi">Öğrenci Yurdu Yönetimi</option>
+                <option value="Eğitim">Eğitim</option>
+                <option value="Spor ve Fitness">Spor ve Fitness</option>
+                <option value="Müze">Müze</option>
+                <option value="Otelcilik ve Konaklama">Otelcilik ve Konaklama</option>
+                <option value="Kurumsal Firma Yönetimi">Kurumsal Firma Yönetimi</option>
+                <option value="Diğer">Diğer</option>
+                <option value=""></option>
+            </select>
+        </div>
+        <div data-aos="zoom-in" data-aos-delay="450" class="inputBox">
+            <span>İşletmenizin Büyüklüğünü Seçiniz?</span>
+             <select name="isletmeolcu" id="isletmeolcu">
+                <option value="">Lütfen Ölçü Seçiniz</option>
+                <option value="Bireysel">Bireysel</option>
+                <option value="Küçük(1-49 Çalışan)">Küçük(1-49 Çalışan)</option>
+                <option value="Orta(50-250 Çalışan)">Orta(50-250 Çalışan)</option>
+                <option value="Büyük(250+ Çalışan)">Büyük(250+ Çalışan)</option>
+             </select>
+        </div>
+        <div data-aos="zoom-in" data-aos-delay="300" class="inputBox">
+            <span>İstenen Teslimat Ülkesi ?</span>
+            <select id="country" name="country" required > 
+                <option value="">Ülkenizi Seçiniz </option>
+                <option value="Türkiye">Türkiye</option>
+                <option value="Rusya">Rusya</option>
+                <option value="Azerbaycan">Azerbaycan</option>
+            </select> 
+        </div>
+        <input data-aos="zoom-in" data-aos-delay="600" type="submit" value="Sipariş Talebi Gönder" class="btn" onclick="showAlert(event)"> 
+    </form>
+</section>
+<!-- booking form section ends -->
+
+<!-- about section starts  -->
+<section class="about" id="about">
+    <div class="video-container" data-aos="fade-right" data-aos-delay="300">
+        <video src="images/tekcipanimation1.mp4" muted autoplay loop class="video"></video>
+        <div class="controls">
+            <span class="control-btn" data-src="images/tekcipanimation1.mp4"></span>
+            <span class="control-btn" data-src="images/tekcipanimation2.mp4"></span>
+            <span class="control-btn" data-src="images/tekcipanimation3.mp4"></span>
+            <span class="control-btn" data-src="images/tekcipanimation4.mp4"></span>
+        </div>
+    </div>
+
+    <div class="content" data-aos="fade-left" data-aos-delay="600">
+        <span>Neden iş ortağınız olmalıyız?</span>
+        <h3>Büyük İnovasyon, Küçük Çiplerde Gizli!</h3>
+        <p>Özgün çip yazılımı ve donanımıyla, büyük bir inovasyonu küçük çiplerin içine sığdırıyoruz. Çip teknolojisinin sınırlarını zorluyor, geleceğe yön veriyoruz. Bizimle, küçük boyutlardaki çiplerin büyük bir fark yaratabileceğini göreceksiniz. İşte bu yüzden biz, 'Büyük İnovasyon, Küçük Çiplerde Gizli' diyoruz. Geleceğin teknolojisini şekillendirmemize yardımcı olun, sizin için en iyi çip çözümlerini sunmak için buradayız.</p>
+        <a href="#blogs" class="btn">Daha Fazla Bilgi Al</a>
+    </div>
+</section>
+<!-- about section ends -->
+
+<!-- destination section starts  -->
+<section class="destination" id="destination">
+    <div class="heading">
+        <span>Hedefimiz: Zirve</span>
+        <h1>Bizimle hedeflerinize yürüyün</h1>
+    </div>
+
+    <div class="box-container">
+        <div class="box" data-aos="fade-up" data-aos-delay="150">
+            <div class="image">
+                <img src="images/hizmet1photo.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>Dijital Kartvizitler: Profesyonel Kimliğinizi Dijitale Taşıyın</h3>
+                <p>"İş dünyasında kullanılan çiplerimiz, profesyonel kimliğinizi güçlendirmeniz ve işinizi dijital platformlarda daha etkili bir şekilde tanıtmanız için bir araç sunar. Bu çipler, iş deneyimi, yetenekler ve başarılarınızı özlü bir dijital portföyde sunmanıza olanak tanır. Böylece potansiyel işverenler veya iş ortakları sizi daha iyi anlayabilir ve iş dünyasında daha fazla fark edilirsiniz."</p>
+                <a href="#book-form" onclick="showalert()">Daha Fazla Bilgi <i class="fas fa-angle-right"></i></a>
+            </div>
+        </div>
+
+        <div class="box" data-aos="fade-up" data-aos-delay="300">
+            <div class="image">
+                <img src="images/hizmet2photo.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>Dijital Yüzükler: Profesyonel Kimliğinizi Sanal Dünyaya Taşıyın</h3>
+                <p>
+                    Ürettiğimiz ve kodladığımız dijital yüzükler, kişisel ve profesyonel verilerinizi her zaman yanınızda taşımanızı sağlayarak geleneksel kartvizit taşıma sorununu ortadan kaldırır. Ayrıca, bu şık dijital yüzükler, iş dünyasında güçlü bir izlenim bırakmanıza ve bağlantılarınızı kolayca paylaşmanıza olanak tanır. Verilerinizi güvende ve erişilebilir tutarak, iş hayatınızı daha akıcı ve etkili bir şekilde yönetmenizi destekler.</p>
+                <a href="#book-form" onclick="showalert()">Daha Fazla Bilgi <i class="fas fa-angle-right"></i></a>
+            </div>
+        </div>
+
+        <div class="box" data-aos="fade-up" data-aos-delay="450">
+            <div class="image">
+                <img src="images/hizmet3photo.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>Dijital Bileklikler: Sanal İş Kimliğinizi Şıklıkla Taşıyın</h3>
+                <p>Dijital Bileklikler, iş kimliğinizi modern ve estetik bir şekilde temsil ederek geleneksel kartvizit taşıma zorunluluğunu ortadan kaldırır. Bu zarif tasarımlı bileklikler, profesyonel verilerinizi taşımanızı sağlayarak iş dünyasında pratik ve etkili bir çözüm sunar. Aynı zamanda verilerinizi güvende tutar ve onlara her an erişebilmenizi sağlayarak, iş hayatınızı daha verimli bir şekilde yönetmenizi destekler.</p>
+                <a href="#book-form" onclick="showalert()">Daha Fazla Bilgi <i class="fas fa-angle-right"></i></a>
+            </div>
+        </div>
+
+        <div class="box" data-aos="fade-up" data-aos-delay="600">
+            <div class="image">
+                <img src="images/hizmet4photo.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>Dijital Kafe: İşletmenizde Temassız Hizmetin Avantajlarını Kullanın</h3>
+                <p>Dijital Kafe, müşterilerin menüyü kolayca görüntülemelerine, işletme hakkında daha fazla bilgi edinmelerine ve ürünlerin hazırlanma sürecini izlemelerine yardımcı olur. Bu sayede müşteriler, siparişlerini hızlı ve bilinçli bir şekilde verebilirler. Teknolojik yaklaşım, hem müşterilere hem de işletme sahiplerine daha iyi bir deneyim sunar.</p>
+                <a href="#book-form" onclick="showalert()">Daha Fazla Bilgi <i class="fas fa-angle-right"></i></a>
+            </div>
+        </div>
+
+        <div class="box" data-aos="fade-up" data-aos-delay="750">
+            <div class="image">
+                <img src="images/hizmet5photo.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>Dijital Müze: Sanat ve Kültürde Temassız Deneyimin Keyfini Sürün</h3>
+                <p>Sunulan özel çipler sayesinde, ziyaretçilere sanat eserleri hakkında ayrıntılı bilgi sunarız. Bu temassız ürünler, fiziksel temas gerektirmez ve böylece ziyaretçilere hem güvenli hem de etkileyici bir müze deneyimi sunar. Ziyaretçiler, temassız teknoloji sayesinde sanat ve kültürün tadını çıkarırken aynı zamanda sağlık ve güvenliklerini de korumuş olurlar.</p>
+                <a href="#book-form" onclick="showalert()">Daha Fazla Bilgi <i class="fas fa-angle-right"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- destination section ends -->
+
+<!-- services section starts  -->
+<section class="services" id="services">
+    <div class="heading">
+        <span>Benzersiz Avantajlar</span>
+        <h1>İş Dünyasında Temassız Avantajları Keşfedin</h1>
+    </div>
+
+    <div class="box-container">  
+        <div class="box" data-aos="zoom-in-up" data-aos-delay="150">
+            <i class="fas fa-money-bill-wave"></i>
+            <h3>Fiyatlar</h3>
+            <p>Fiyatlarımızdaki farkı, uygun fiyatla yüksek kaliteyi bir araya getirerek, mükemmel bir fiyat performans hizmeti sunarak ortaya koyuyoruz.</p>
+        </div>
+
+        <div class="box" data-aos="zoom-in-up" data-aos-delay="300">
+            <i class="fas fa-crown"></i>
+            <h3>Yüksek Kalite </h3>
+            <p>Temassız dijital kimlikler, iş dünyasında hızlı giriş, güvenli veri erişimi ve iş süreçlerinin izlenmesi gibi avantajlar sunar. Ayrıca, mobil uyumluluk ve maliyet verimliliği sağlar, işletmelerin daha güvenli ve verimli çalışmasına katkı sağlar.</p>
+        </div>
+
+        <div class="box" data-aos="zoom-in-up" data-aos-delay="450">
+            <i class="fas fa-universal-access"></i>
+            <h3>Çeşitli Kullanım Alanları</h3>
+            <p>Ürün yelpazemiz, çeşitli sektörlerdeki gereksinimlere uygun şekilde temassız dijital kimlik çözümleri sunar. Bu, güvenlik, erişim kontrolü ve kimlik doğrulama gibi bir dizi uygulama için esnek ve etkili bir seçenek sunar.</p>
+        </div>
+
+        <div class="box" data-aos="zoom-in-up" data-aos-delay="600">
+            <i class="fas fa-sticky-note"></i>
+            <h3>Temassız Teknoloji </h3>
+            <p>Temassız kullanım, kullanıcılara büyük bir avantaj sunar çünkü hızlı, güvenli ve kolay bir deneyim sunar. Ayrıca, temas gerektiren geleneksel yöntemlere kıyasla daha hijyenik bir seçenektir.</p>
+        </div>
+
+        <div class="box" data-aos="zoom-in-up" data-aos-delay="750">
+            <i class="fas fa-address-card"></i>
+            <h3>Özelleştirme</h3>
+            <p>Tüm ürünlerimizde özelleştirme seçeneği bulunur, böylece müşteriler kendi ihtiyaçlarına ve marka kimliğine uygun temassız dijital kimlik çözümleri oluşturabilirler.</p>
+        </div>
+
+        <div class="box" data-aos="zoom-in-up" data-aos-delay="900">
+            <i class="fas fa-tree"></i>
+            <h3>Çevre Dostu</h3>
+            <p>Ürünlerimiz çevre dostu bir yaklaşım benimser, plastik atıkların azaltılmasına katkı sağlar ve çevreyi koruma konusunda sorumluluğumuzu yansıtır. Bu, sürdürülebilir ve çevre bilincine katkıda bulunan bir tercih sunar.</p>
+        </div>
+
+        <div class="box" data-aos="zoom-in-up" data-aos-delay="900">
+            <i class="fas fa-bolt"></i>
+            <h3>Kolay Kullanım</h3>
+            <p>Ürünlerimiz, kolay kullanım sağlar ve kullanıcıların rahatça temassız dijital kimlik teknolojisinden faydalanmasını mümkün kılar.</p>
+        </div>
+    </div>
+</section>
+
+<!-- services section ends -->
+
+<!-- gallery section starts  -->
+
+<section class="gallery" id="gallery">
+
+    <div class="heading">
+        <span>Görsel Gezi</span>
+        <h1>Geleceğin İzleri: Çiplerin Renkli Dünyası</h1>
+    </div>
+    
+    <div class="box-container">
+
+        <div class="box" data-aos="zoom-in" data-aos-delay="150">
+            <img src="images/galleryimg1.jpg" alt="">
+            <span>Yeni Bileklik Modelleri Yakında</span>
+            <h3>Yeni bileklik modellerini araştırarak, sizin için en iyi seçenekleri bulmaya çalışıyoruz </h3>
+        </div>
+
+        <div class="box" data-aos="zoom-in-up" data-aos-delay="450">
+            <img src="images/galleryimg3.jpg" alt="">
+            <span>Ergonomik Zarafet</span>
+            <h3>Büyük Markaların Ürünlerinden Esinlenerek Yeni Tasarımlar Peşindeyiz</h3>
+        </div>
+
+        <div class="box" data-aos="zoom-in-up" data-aos-delay="300">
+            <img src="images/galleryimg2.jpg" alt="">
+            <span>Renk Paletiyle Tarzını Yansıt</span>
+            <h3>Farklı renklerle tasarlanmış ürünlerle, tarzınızı benzersiz bir şekilde ifade edin</h3>
+        </div>
+
+        <div class="box" data-aos="zoom-in-up" data-aos-delay="150">
+            <img src="images/galleryimg4.jpg" alt="">
+            <span>Yenilikçi NFC teknolojisiyle tasarladığımız menüler</span>
+            <h3>Minimalizmin şıklığıyla buluşarak müşterilere modern, pratik ve zengin bir yemek deneyimi sunuyor.</h3>
+        </div>
+
+        <div class="box" data-aos="zoom-in-up" data-aos-delay="300">
+            <img src="images/galleryimg5.jpg" alt="">
+            <span>En İnce Detaylar, En Zarif Yüzükler: Size Özel İncelikler</span>
+            <h3>İnce zevklere hitap eden yüzüklerimiz, en zarif detaylarla özenle hazırlanıyor, sizi özel kılacak yüzükler sunuyoruz</h3>
+        </div>
+
+        <div class="box" data-aos="zoom-in-up" data-aos-delay="450">
+            <img src="images/galleryimg6.jpg" alt="">
+            <span>Evcil Hayvan Çipleri ve Güvenlik</span>
+            <h3>
+                Yenilikçi firmalardan ilham alarak tasarladığımız evcil hayvanlara özel çipler, sevimli dostlarımızın güvenliğini en üst düzeye çıkarmayı hedefliyor</h3>
+        </div>
+
+        <div class="box" data-aos="zoom-in-up" data-aos-delay="150">
+            <img src="images/galleryimg7.jpg" alt="">
+            <span>NFC Tabelalarla İşletmenizi Kolayca Tanıtın</span>
+            <h3>NFC Tabelalarıyla İşletmenizin Hikayesini Tek Dokunuşta Paylaşın, Modern ve Teknolojik Bir Deneyim Sunun</h3>
+        </div>
+    </div>
+</section>
+
+<!-- gallery section ends -->
+
+<!-- review section starts  -->
+
+<section class="review">
+
+    <div class="content" data-aos="fade-right" data-aos-delay="300">
+        <span>İzlenim</span>
+        <h3>Başarı Hikayemiz: Müşteri ve İş Ortaklarından Gelen Olumlu İzlenimlerle Dolu Bir Yolculuk!</h3>
+        <p>Müşteri ve iş ortaklarımızdan gelen olumlu izlenimler, bizi daha da motive ediyor ve işimizde daha da ilerlememizi sağlıyor, bu destekle büyüyoruz</p>
+    </div>
+
+    <div class="box-container" data-aos="fade-left" data-aos-delay="600">
+
+        <div class="box">
+            <p>
+                Otelden müşteri memnuniyetini en üst düzeye çıkarmak ve en son teknoloji yeniliklerinden faydalanmak amacıyla Tekçip ürünlerini kullanıyoruz. Müşterilerimiz, Tekçip'in teknolojik çözümleri sayesinde konaklamalarının daha konforlu ve modern bir deneyim olduğunu memnuniyetle deneyimliyorlar.</p>
+            <div class="user">
+                <img src="images/pic-1.png" alt="">
+                <div class="info">
+                    <h3>Otelcilik ve Konaklama</h3>
+                    <span>Tekçip kullanıcısı</span>
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <p>
+                Fitness salonumuzda, müşteri konforunu ve sağlığını en üst düzeye çıkarmak adına Tekçip'in sağlık odaklı ürünlerini kullanıyoruz. Bu yenilikçi çözümler, müşterilerimize daha güvenli ve teknolojik bir fitness deneyimi sunmamıza yardımcı oluyor.</p>
+            <div class="user">
+                <img src="images/pic-2.png" alt="">
+                <div class="info">
+                    <h3>Sağlık ve Egzersiz</h3>
+                    <span>Tekçip kullanıcısı</span>
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <p>
+                Kafe ve restoranımızda, misafirlerimize Tekçip'in temassız menu hizmeti ve çeşitli temassız çözümlerle en üst düzeyde yemek deneyimi sunuyoruz. Bu sayede, müşterilerimiz konforlu bir şekilde yemeklerini seçebilir ve en yüksek kalitede hizmeti sorunsuz bir biçimde deneyimleyebilirler.</p>
+            <div class="user">
+                <img src="images/pic-3.png" alt="">
+                <div class="info">
+                    <h3>Kafe ve Restoran</h3>
+                    <span>Tekçip kullanıcısı</span>
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <p>Tekçip'in temassız çipleri sayesinde güzellik salonumuzda müşterilere hızlı ve güvenli bir deneyim sunuyoruz. NFC teknolojisinin kullanımıyla ödemeleri kolaylaştırmanın yanı sıra, kişiselleştirilmiş hizmetleri ve randevu yönetimini daha etkili bir şekilde gerçekleştiriyoruz.</p>
+            <div class="user">
+                <img src="images/pic-4.png" alt="">
+                <div class="info">
+                    <h3>Güzellik Salonu </h3>
+                    <span>Tekçip kullanıcısı</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- review section ends -->
+
+<!-- blogs section starts  -->
+
+<section class="blogs" id="blogs">
+
+    <div class="heading">
+        <span>Blog</span>
+        <h1>TekÇip İnavsayonu</h1>
+    </div>
+
+    <div class="box-container">
+
+        <div class="box" data-aos="fade-up" data-aos-delay="150">
+            <div class="image">
+                <img src="images/galleryimg1.jpg" alt="">
+            </div>
+            <div class="content">
+                <a href="#" class="link">Yeni Bileklik Modelleri Yakında</a>
+                <p>Yenilik ve şıklığı bir araya getiren yeni bileklik tasarımlarımız çok yakında sizlerle! Tekçip'in temassız çipleri, sadece stilinizi tamamlamakla kalmayacak, aynı zamanda günlük yaşamınızı daha pratik hale getirecek. Beklenen lansmanla birlikte, moda ve teknolojiyi bir araya getiren bu özel koleksiyonla tanışmak için sabırsızlanıyoruz. Tarzınızı ve kullanıcı deneyiminizi yükseltmek için hazır olun!</p>
+                <div class="icon">
+                    <a href="#"><i class="fas fa-wind"></i> Yenilik Rüzgarları </a>
+                    <a href="#"><i class="fas fa-microchip"></i>TekÇip</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="box" data-aos="fade-up" data-aos-delay="300">
+            <div class="image">
+                <img src="images/galleryimg2.jpg" alt="">
+            </div>
+            <div class="content">
+                <a href="#" class="link">Tarzınıza Yeni Bir Renk Katacağız: Stilinizi Yenilemek İçin Hazır Olun!</a>
+                <p>Renklerle ifade bulan benzersiz tasarımlarımızla öne çıkıyoruz. Ürünlerimizde renk seçeneklerine büyük önem veriyor ve sizlere geniş bir renk paleti sunarak tarzınızı özgürce ifade etme imkanı tanıyoruz. Yeni tasarımlarımızla, farklı renklerin büyüsünü keşfedecek ve stilinize yeni bir boyut kazandıracaksınız.</p>
+                <div class="icon">
+                    <a href="#"><i class="fas fa-wind"></i> Yenilik Rüzgarları</a>
+                    <a href="#"><i class="fas fa-microchip"></i>TekÇip</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="box" data-aos="fade-up" data-aos-delay="450">
+            <div class="image">
+                <img src="images/galleryimg5.jpg" alt="">
+            </div>
+            <div class="content">
+                <a href="#" class="link">Göz Alıcı Zarafet: Tekçip'in Yepyeni Yüzük Tasarımlarıyla Tanışın!</a>
+                <p>Tekçip ailesi olarak, yüzük tasarımlarımızda şıklığı, zarafeti ve en ince detayları ön planda tutuyoruz. Müşterilerimize vaat ettiğimiz özgün tasarımlarımızla, her anınızı özel kılacak bir deneyim sunmaktan gurur duyuyoruz. Kalitede ve estetikte sınırları zorlamak için çalışıyoruz.</p>
+                <div class="icon">
+                    <a href="#"><i class="fas fa-wind"></i> Yenilik Rüzgarları</a>
+                    <a href="#"><i class="fas fa-microchip"></i>TekÇip</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- blogs section ends -->
+
+<!-- banner section starts  -->
+
+<div class="banner">
+
+    <div class="content" data-aos="zoom-in-up" data-aos-delay="300">
+        <span>Stilinizi Keşfedin</span>
+        <h3>Yenilikçi ve Trend Ürünlerimizi İnceleyin</h3>
+        <p>Yenilikçi ürün portföyümüz, hayatınızı daha konforlu hale getirmek ve işletmenizin başarısını artırmak için tasarlanmıştır. Eksiksiz ve işlevsel çözümlerimizle müşterilerinizin beklentilerini aşın, memnuniyeti artırın ve satışlarınızı zirveye taşıyın.</p>
+        <a href="#book-form" class="btn">Bizimle İletişime Geç</a>
+    </div>
+
+</div>
+
+<!-- banner section ends -->
+
+<!-- footer section starts  -->
+
+<section class="footer">
+
+    <div class="box-container">
+
+        <div class="box" data-aos="fade-up" data-aos-delay="150">
+            <a href="#" class="logo"> Tek <i class="fas fa-microchip"></i>Çip </a>
+            <p>Hakkımızda daha fazla bilgi edinmek için aşağıdaki geçitleri kullanın.</p>
+            <div class="share">
+                <a href="" class="fab fa-instagram"></a>
+                <a href="" class="fab fa-facebook"></a>
+                <a href="" class="fab fa-telegram"></a>
+                <a href="mailto:info@tekçip.com" class="fas fa-envelope"></a>
+            </div>
+        </div>
+
+        <div class="box" data-aos="fade-up" data-aos-delay="300">
+            <h3>Kolay Linkler</h3>
+            <a href="#home" class="links"> <i class="fas fa-arrow-right"></i> Ana Sayfa </a>
+            <a href="#about" class="links"> <i class="fas fa-arrow-right"></i> Hakkımızda </a>
+            <a href="#destination" class="links"> <i class="fas fa-arrow-right"></i> Özellikler </a>
+            <a href="#services" class="links"> <i class="fas fa-arrow-right"></i> Hizmetlerimiz </a>
+            <a href="#gallery" class="links"> <i class="fas fa-arrow-right"></i> Galeri </a>
+            <a href="#blogs" class="links"> <i class="fas fa-arrow-right"></i> Blog </a>
+        </div>
+
+        <div class="box" data-aos="fade-up" data-aos-delay="450">
+            <h3>Çalışma Saatlerimiz ve Konum</h3>
+            <p > <i class="fas fa-map" ></i> <a target="_blank" href="https://www.google.com/search?q=baku+azerbaijan+konum&oq=baku+azerbaijan+konum&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIHCAEQABiABDIICAIQABgWGB4yCAgDEAAYFhgeMggIBBAuGBYYHjIICAUQABgWGB4yCAgGEAAYFhgeMggIBxAAGBYYHjIICAgQABgWGB4yCAgJEAAYFhge0gEINTMwOGowajeoAgCwAgA&sourceid=chrome&ie=UTF-8#eim=CAEQDBoSNDAuNDA5MjYxNjk5OTk5OTk1Igo0OS44NjcwOTI0" class="links">Baku/Azerbaijan</a></p>
+            <p> <i class="fas fa-clock"></i> Hafta İçi Çalışma Saatleri: <br>
+               - Pazartesi: 07:00 - 22:00 <br>
+               - Salı: 07:00 - 22:00 <br>
+               - Çarşamba: 07:00 - 22:00 <br>
+               - Perşembe: 07:00 - 22:00 <br>
+               - Cuma: 07:00 - 22:00 <br> <br>
+                Hafta Sonu Çalışma Saatleri: <br> 
+               - Cumartesi: 09:00 - 17:00 <br>
+               - Pazar: 09:00 - 17:00 </p>
+        </div>
+
+        <div class="box" data-aos="fade-up" data-aos-delay="600">
+            <h3>Dijital Bülten</h3>
+            <p>Son gelişmeler ve yeni ürünler hakkında bilgi almak için bizi takip edin, sizi her zaman en güncel haberlerle ve ürünlerle haberdar edelim.</p>
+            <form action="">
+                <input type="email" name="" placeholder="Mail Adresinizi Giriniz Lütfen" class="email" id="">
+                <input type="submit" value="Takip Et" class="btn" href="#book-form">
+            </form>
+        </div>
+
+    </div>
+
+</section>
+
+<div class="credit">© 2022  <span><a href="https://tekçip.com/">TekÇip Donanım ve Yazılım Şirketi. </a></span> | Tüm hakları saklıdır.<br><br></div>
+
+<!-- footer section ends -->
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+<script>
+
+    AOS.init({
+        duration: 600,
+        offset:150,
+    });
+
+</script>
+
+</body>
+</html>
